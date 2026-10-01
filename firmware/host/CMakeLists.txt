@@ -27,3 +27,6 @@ else()
 endif()
 enable_testing()
 add_test(NAME switch_control_meter_protocol COMMAND test_core)
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+add_test(NAME switch_tls_config_guard COMMAND "${Python3_EXECUTABLE}"
+  "${FIRMWARE}/tests/check_tls_config.py" --cc "${CMAKE_C_COMPILER}")

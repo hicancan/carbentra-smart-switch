@@ -12,6 +12,7 @@
 - **查元器件**：`electronics/bom.csv`、`pinmap.csv`、`mechanical_interface.json`
 - **制造与展示**：[GitHub Releases](https://github.com/hicancan/carbentra-smart-switch/releases) 提供 Gerber/钻孔、GLB/STL、图片/PDF/视频与默认禁止吸合的开发固件。
 - **继续固件**：[固件说明](firmware/README.md)、[协议与条件](docs/firmware.md)、[实际目标构建报告](firmware/build-report.json)
+- **安全修复复验**：[本次固件修复报告](firmware/remediation-report.json)：证书日期配置、实际 ESP32-C3 编译负控与独立 host 证书负控；不代替实物 TLS 握手或现场安全验证
 - **了解电气前提**：[电路说明](docs/electronics.md)、[结构说明](mechanical/README.md)
 
 ## 已实现的范围

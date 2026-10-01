@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-01T14:22:45.652564+00:00",
+  "status": "FRESH_HOST_AND_TARGET_PASS_PHYSICAL_UNTESTED",
+  "scope": "Firmware software remediation and fresh MCU compilation; hardware and deployed network behavior untested",
+  "base_git_revision": "04cbd2c37c45e55fc5ee95303d256a27d499ae83",
+  "source_binding": "Current maintained firmware/build/test source byte inventory after the listed regressions. Target C/header inputs were rebuilt. Does not assert CAD/media were revalidated.",
+  "source_sha256": {
+    "firmware/CMakeLists.txt": "64b607b574c726a7b043036dde1cec2121e74f11b08a34974dfe981d13f79eb6",
+    "firmware/core/meter.c": "fbb6eea1e954fe3cefcd3b02fd6841d792a215f2606461b775469ab00c96826b",
+    "firmware/core/meter.h": "3cea38ecc2c7ad83d7f222e6c6f0b48a79a371f2d62611745f64ebd9534e67de",
+    "firmware/core/switch_core.c": "2e804ab363d55fb6ececd78e3ab713485e4b15c0a4acbd093befefd76b192d4d",
+    "firmware/core/switch_core.h": "7be0725f6417e835560ed786cce40c19ec3fed93ebeb58be6cde939d93f266e1",
+    "firmware/dependencies.lock.json": "416f9a8af682c9afa377a0f194fe12845d622b7a79b3826510c6ad87c0515e62",
+    "firmware/host/CMakeLists.txt": "69e371037a03181b095cd13a6280fa4c84bedf4a0f430636e99bb2060c94352c",
+    "firmware/main/CMakeLists.txt": "ae6edc5a2364804107af55cb0840ac9f235e713aa68734085150985f41f01764",
+    "firmware/main/Kconfig.projbuild": "07cff166da8965cce914bc1f225852a63316329d72590804cdacdf591c7a0765",
+    "firmware/main/app_main.c": "294bbebbcf252876d321835050d147558a33a0dab95f528a1454a54e66e95f1e",
+    "firmware/main/app_state.h": "eac7f7098bf4b8a4f952b8874a46069a51e58a43beff2ecc1cce240a0eedf65e",
+    "firmware/main/board.h": "0fbca7455174d1fb02d79d70b288bca5a43cd94a1db5e83ca93d15269605d5bb",
+    "firmware/main/command_json.c": "ed28774717cde8991d1c060399a51babc33c367e2d9733b53be22e9d88e18ac6",
+    "firmware/main/command_json.h": "3db1d133f46109be4cb24eb8c0952beac23ad4b9589825a9b2a70e8c1a891edc",
+    "firmware/main/device_config.c": "b7d8347b3bed863501d621f669f3d8e2ff516750e9e6631edc7a9db6732fd628",
+    "firmware/main/device_config.h": "f87a69aff04b793a36ce4df3930d4100bbe60ed6c47de337e427ec9b21a0fca6",
+    "firmware/main/network.c": "54df8176d6fcfeedb26605c8c82ab23a520266a7495377d4e316505c68e06169",
+    "firmware/main/network.h": "18fdae1eec19a84b93e7d45e412e71676897dc680eb02b14b6170538eeb874b0",
+    "firmware/main/tls_policy.h": "8d7353ea438c352e66a6c88f223fea8d48aa66c39cfb18ddc5cd5af7ad500111",
+    "firmware/partitions.csv": "eaef803a3de2717770a40446c7ff874fa1d0eb5c884c8b7584f2c0324ba25367",
+    "firmware/sdkconfig": "41093dc62f081a7564296e2b00d1a1c369ccb7019fd73f1e269d1bd6bf353111",
+    "firmware/sdkconfig.defaults": "3b56fe93bfb0b97ea3e512946a2fdbf892e35e64434aa64e140443bab59e7cac",
+    "firmware/tests/check_certificate_policy.py": "2dd862075ef182c57885facf609775446f4c16ea80279c4d17d1f8ba409658db",
+    "firmware/tests/check_tls_config.py": "3eccb1d4a09b778d44b31ae34f2048e7f1d9084f16bc68f748204b341481e457",
+    "firmware/tests/test_certificate_policy.c": "81beda6a84a6a3e6c875f9aac56b8687477d75a7e9c15eeb9c2f5858e3934df0",
+    "firmware/tests/test_core.c": "ba6d562f7b9e97d0746c917ed2d6cac4704768e27b5fed9fd2d49f5b69260d4e",
+    "firmware/tools/check_target_tls_guard.py": "8475bc0c0e332f1174391a5938f09aa91c56bfd55c93e84bf4da1c2a02ad0534",
+    "firmware/tools/check_tls_config.py": "3a3cff28cafbfa140e25fbf424b4c97606ee21d5bee3c9ed53b71fc1427fc6d0",
+    "firmware/tools/prepare_factory_csv.py": "cbdba380bdb9a3b32114b8e94c7e563e7adcef6a4c2cb12c6e562017431237dd",
+    "scripts/dev.ps1": "f311fba25f946b3367991d74ff84323926674e178fed2bdce976ac6c402ffd1a",
+    "scripts/engineering.py": "3a3d9abd00eac9266dc495e7f26a0a8e9541bdfd428817620f9fd58b3a1417bd",
+    "scripts/local_runtime.py": "973f7c672d859df6722d6c4a39f88ed444faeda73b29d271b50b46c882ab4141",
+    "scripts/package_release.py": "fa6eb3ef39c7cab3d08673543bfd7dbbb0da38828a2fb8382dd4077012c5c182",
+    "scripts/source_manifest.py": "c39bde4d4e39548fea88f21bccf93b3ce8f8d8fc24f21b66a0bb273d404f30af"
+  },
+  "artifacts": {
+    "carbentra_smart_switch.bin": {
+      "bytes": 1122480,
+      "sha256": "bd2ab6600753ae2910a20e07522dbc5dcc7eb32089aa44cf4853871b710d562a"
+    },
+    "carbentra_smart_switch.elf": {
+      "bytes": 12617420,
+      "sha256": "3246f7bddfb4f9e8ee4f1df7b01aa327523856be353b9c81a5c11017266ca87e"
+    },
+    "bootloader.bin": {
+      "bytes": 20832,
+      "sha256": "20064cd376b80fbfe88b418846b69a762c63f79325a2e9c3f87fdb555e54dba3"
+    },
+    "partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "7d1ecdcd22ccc7bd7b9aaa669247714f68dabb71982c16eadc8eb55cb6950174"
+    },
+    "sdkconfig": {
+      "bytes": 72583,
+      "sha256": "41093dc62f081a7564296e2b00d1a1c369ccb7019fd73f1e269d1bd6bf353111"
+    }
+  },
+  "physical_validation": {
+    "flashed": false,
+    "physical_actuation": false,
+    "radio_tested": false,
+    "production_credentials_created": false,
+    "deployment_ready": false
+  },
+  "limits": [
+    "No board flashing or physical actuation",
+    "No real BLE/RF/radar/relay/lamp/mains tests",
+    "No production credentials, calibration or safety qualification",
+    "Old Windows/CAD/media evidence remains historical; this report does not renew it",
+    "SNTP wall time remains unauthenticated; reviewed threat boundary in docs/firmware.md. Date validation alone does not provide trusted time."
+  ],
+  "target": {
+    "board": "esp32c3",
+    "sdk": "ESP-IDF 5.4.3",
+    "sdk_commit": "ea1c174c1cbb7348bd8ba0ff1eb306246938dd80",
+    "compiler": "riscv32-esp-elf GCC14.2.0 esp-14.2.0_20250730",
+    "app_bytes": 1122480,
+    "physical_actuation_enabled": false,
+    "certificate_dates_enabled": true
+  },
+  "tests": {
+    "cmake_ctest": "2/2 PASS",
+    "config_regression_tests": 3,
+    "actual_target_network_compile_cases": [
+      {
+        "case": "generated_config",
+        "expected_compile_success": true,
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "date_disabled",
+        "expected_compile_success": false,
+        "returncode": 1,
+        "passed": true
+      },
+      {
+        "case": "time_disabled",
+        "expected_compile_success": false,
+        "returncode": 1,
+        "passed": true
+      },
+      {
+        "case": "insecure_enabled",
+        "expected_compile_success": false,
+        "returncode": 1,
+        "passed": true
+      }
+    ],
+    "core_asan_ubsan": "PASS, including 2000 malformed JSON cases",
+    "certificate_behavior": "valid/expired/not-yet-valid/wrong-CA/wrong-hostname controls PASS on native host mbedTLS",
+    "host_mbedtls": {
+      "version": "3.6.4",
+      "commit": "b5d87eaa6748b7a6fa70593178c08b4480e9b71e",
+      "source": "pinned ESP-IDF submodule; native host default configuration, not target TLS execution"
+    },
+    "target_tls_handshake_executed": false
+  },
+  "evidence_bundle": "current-github-audit/evidence/remediation/firmware; build logs under external firmware-toolchains; release packaging owns binaries"
+}

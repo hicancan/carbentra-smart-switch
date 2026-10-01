@@ -1,4 +1,5 @@
 #include "network.h"
+#include "tls_policy.h"
 #include "app_state.h"
 #include "command_json.h"
 #include <inttypes.h>
@@ -141,7 +142,9 @@ static void wifi_event(void *arg,esp_event_base_t base,int32_t id,void *data){
 static void network_task(void *unused){
     (void)unused;xEventGroupWaitBits(events,WIFI_UP,false,true,portMAX_DELAY);
     esp_sntp_setoperatingmode(SNTP_OPMODE_POLL);esp_sntp_setservername(0,"pool.ntp.org");esp_sntp_init();
-    /* Certificate validity checks need usable wall time; commands themselves use boot-relative TTL. */
+    /* SNTP supplies usable, NOT authenticated wall time. See docs/firmware.md
+     * for the time-source threat boundary. Date validation is build-required;
+     * commands themselves use boot-relative TTL. */
     while(time(NULL)<1735689600)vTaskDelay(pdMS_TO_TICKS(1000));
     if(!cfg->mqtt_ready){ESP_LOGW(TAG,"Authenticated broker configuration missing; local switching remains active");vTaskDelete(NULL);return;}
     snprintf(command_topic,sizeof(command_topic),"carbentra/switch/%s/command",cfg->device_id);

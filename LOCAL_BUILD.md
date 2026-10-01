@@ -46,6 +46,39 @@ The Windows GitHub Actions workflow pins uv 0.11.17 and Python 3.12, creates the
 
 For Switch, set CJSON_ROOT to a standalone checkout at the exact sdk_submodules.cJSON commit in firmware/dependencies.lock.json. The coordinator verifies the commit before compiling. If that variable is absent, the existing IDF_PATH/components/json/cJSON source is used. CI fetches only this small upstream dependency and does not alter the pin.
 
+CTest additionally runs `firmware/tests/check_tls_config.py`, which checks both
+maintained TLS date configurations and compiles the actual `tls_policy.h` against
+positive/negative host fixtures. The target coordinator checks its generated
+sdkconfig after building; the real network translation unit includes the guard.
+
+The independent certificate behavior test is a separate host-library gate. With
+a development mbedTLS installation and Python `cryptography`, compile
+`firmware/tests/test_certificate_policy.c` against that installation's `mbedx509`
+and `mbedcrypto` libraries, then run:
+
+```sh
+python firmware/tests/check_certificate_policy.py --verifier /external-build/switch_certificate_policy
+```
+
+The binary argument is mandatory and missing binaries are errors, not skips.
+This checks valid/expired/future/wrong-CA/wrong-hostname certificates using that
+host library. Record its version. It does not replace a pinned ESP-IDF target
+build or MQTT handshake tests on the ESP32-C3.
+
+On POSIX hosts, target builds additionally run `firmware/tools/check_target_tls_guard.py`
+against the generated compilation database. It recompiles the actual `network.c`
+with its real ESP32-C3 compiler/SDK headers, checks the successful generated config,
+and requires compilation to fail when time/date checks are disabled or insecure
+TLS is enabled in a temporary header overlay. It writes only external temporary
+objects and `target-tls-guard.json`; it never links or flashes an unsafe image.
+This is target **compile** evidence, not certificate-handshake execution evidence.
+
 ## Source byte identity
 
 The checked-in .gitattributes keeps native KiCad/JSON bytes unchanged and checks ordinary code out with LF on every platform. verification/source-manifest.json hashes the published source bytes; those hashes are checked against Git blobs, not only one Windows working tree. The complete build was rerun after text normalization. Earlier render-execution hashes are explicitly historical working-tree hashes; CAD bytes and geometric inputs did not change, so media was not rerendered solely for newline conversion.
+
+Current source byte inventory is checked with `python scripts/source_manifest.py`.
+After intentional source changes and completed relevant tests, refresh it using
+`python scripts/source_manifest.py --write`. This records exact checkout bytes; it
+does not rerun or renew the historical Windows/CAD/media qualification reports.
+The current firmware-only evidence is `firmware/remediation-report.json`.

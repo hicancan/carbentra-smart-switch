@@ -8,7 +8,13 @@ The initial image boots all outputs OFF. Physical key sensing works without Wi-F
 
 Follow [LOCAL_BUILD.md](../LOCAL_BUILD.md) for the uv + PowerShell + MSVC workflow and pinned ESP-IDF 5.4.3 SDK. The SDK's cJSON compiles with the actual control, meter and command decoder sources. CTest checks commissioning, channel-local holds, maintenance/protection, offline local keys, strict uint64 JSON, replay, meter framing and 2,000 malformed inputs.
 
-See [build-report.json](build-report.json) for the current Windows target image size, source hashes and tested scope. Current MSVC strict-warning checks do not claim UBSan or LeakSanitizer. Development images and compiler logs are generated outside Git and included in the matching Release. The build keeps actuation disabled. No board was flashed, calibrated, energized or physically tested.
+See [remediation-report.json](remediation-report.json) for the fresh Linux ESP32-C3
+build and TLS remediation evidence. It includes target compile-negative controls
+and separately labeled host certificate behavior tests. [build-report.json](build-report.json)
+retains the earlier Windows build's original hashes and scope. Development images
+and compiler logs are generated outside Git and included in the matching Release.
+The build keeps actuation disabled. No board was flashed, calibrated, energized or
+physically tested.
 
 ## Setup
 

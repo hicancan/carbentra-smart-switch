@@ -1,6 +1,11 @@
 {
-  "schema_version": 1,
-  "binding": "Exact published Git blob bytes. Excludes only this manifest and the two generated build/validation reports.",
+  "schema_version": 2,
+  "binding": "Exact current checkout bytes for release staging; this inventory does not claim any new CAD, media or physical validation.",
+  "excluded_historical_reports_and_self": [
+    "firmware/build-report.json",
+    "verification/local-validation.json",
+    "verification/source-manifest.json"
+  ],
   "files": {
     ".gitattributes": {
       "bytes": 353,
@@ -39,16 +44,16 @@
       "sha256": "04886d72293c1fc8165bcb50ed2d6fa2f5f904bf00adfdaba1c3370790ac14db"
     },
     "LOCAL_BUILD.md": {
-      "bytes": 5019,
-      "sha256": "72ec7122b3b7e1e4341fbd6e9237b6e60fa8d6e1e6d37ca00a01043e9813f218"
+      "bytes": 6989,
+      "sha256": "35d0b68901d4e1a8540247e5e721a70293d5e02bf62453facf4ccaa407c6e54c"
     },
     "README.assets/hero.png": {
       "bytes": 984231,
       "sha256": "1d6c7a4c5e30fe95b050c8aaf69a51a8035b2cdd2446ef4424a780650e936aeb"
     },
     "README.md": {
-      "bytes": 4141,
-      "sha256": "573592d289c4ad01658f5940375010297f7e61f456cf1095744a7cfad4a98e38"
+      "bytes": 4358,
+      "sha256": "fc8bc9f83d5fa4ce570217eb0e9be807046fb381adbce974f091caffc8c733f8"
     },
     "docs/device-capabilities.json": {
       "bytes": 2127,
@@ -59,8 +64,8 @@
       "sha256": "67bbe0e7b52cf1db71d4ce0c0e32b3bf4395143b69ffc96d9a9a407c62983bf7"
     },
     "docs/firmware.md": {
-      "bytes": 16625,
-      "sha256": "c9b75e88a605dac9bdeae2c61561609d37f7fef61ae59e61393475c1409b9684"
+      "bytes": 18434,
+      "sha256": "a19567e7c2e4d9ca6d3989f5100c63d1629b8ff011304137a2e9ccd8f1c5c4ac"
     },
     "electronics/Button_Switch_SMD.pretty/SW_SPST_B3U-1000P.kicad_mod": {
       "bytes": 4192,
@@ -255,8 +260,8 @@
       "sha256": "64b607b574c726a7b043036dde1cec2121e74f11b08a34974dfe981d13f79eb6"
     },
     "firmware/README.md": {
-      "bytes": 3268,
-      "sha256": "7aaeed816ce59afe3383a101dfcd5df57b1775efd7d845cdbf328b0cccef9759"
+      "bytes": 3401,
+      "sha256": "f06c0a689a34aa7520cd4acd6766910c33ed1abc6614ddaf58313e81cbe03e71"
     },
     "firmware/THIRD_PARTY_NOTICES.md": {
       "bytes": 1349,
@@ -283,8 +288,8 @@
       "sha256": "416f9a8af682c9afa377a0f194fe12845d622b7a79b3826510c6ad87c0515e62"
     },
     "firmware/host/CMakeLists.txt": {
-      "bytes": 1296,
-      "sha256": "49c0f05c9af95cada1800d2905acccf1a168b324fa046f0b728a64c4ba0f2e64"
+      "bytes": 1490,
+      "sha256": "69e371037a03181b095cd13a6280fa4c84bedf4a0f430636e99bb2060c94352c"
     },
     "firmware/licenses/ESP-IDF-Apache-2.0.txt": {
       "bytes": 11560,
@@ -347,8 +352,8 @@
       "sha256": "d51980b934e4411a8e0d80ce61afa28978bf0d49c50d0ee93f705679cb8a6042"
     },
     "firmware/main/CMakeLists.txt": {
-      "bytes": 298,
-      "sha256": "c237799fa0021fc7f234c85bb71d81804fa160996b4a1b86620c6c8eda9f71fd"
+      "bytes": 306,
+      "sha256": "ae6edc5a2364804107af55cb0840ac9f235e713aa68734085150985f41f01764"
     },
     "firmware/main/Kconfig.projbuild": {
       "bytes": 353,
@@ -383,28 +388,56 @@
       "sha256": "f87a69aff04b793a36ce4df3930d4100bbe60ed6c47de337e427ec9b21a0fca6"
     },
     "firmware/main/network.c": {
-      "bytes": 12173,
-      "sha256": "d0f52a61f0da0dd03813dfaa3328c585fee4376736cd2e28a59c2b9c11ae53a4"
+      "bytes": 12304,
+      "sha256": "54df8176d6fcfeedb26605c8c82ab23a520266a7495377d4e316505c68e06169"
     },
     "firmware/main/network.h": {
       "bytes": 135,
       "sha256": "18fdae1eec19a84b93e7d45e412e71676897dc680eb02b14b6170538eeb874b0"
     },
+    "firmware/main/tls_policy.h": {
+      "bytes": 811,
+      "sha256": "8d7353ea438c352e66a6c88f223fea8d48aa66c39cfb18ddc5cd5af7ad500111"
+    },
     "firmware/partitions.csv": {
       "bytes": 201,
       "sha256": "eaef803a3de2717770a40446c7ff874fa1d0eb5c884c8b7584f2c0324ba25367"
     },
+    "firmware/remediation-report.json": {
+      "bytes": 7009,
+      "sha256": "872965de9cab5541dd8a62693ada7588a89f8640bf33aa5a181594b002c04228"
+    },
     "firmware/sdkconfig": {
-      "bytes": 72594,
-      "sha256": "351ab73cfd653960f8e990d2b8df053709a539e722437a1f8a0c610cde27697b"
+      "bytes": 72583,
+      "sha256": "41093dc62f081a7564296e2b00d1a1c369ccb7019fd73f1e269d1bd6bf353111"
     },
     "firmware/sdkconfig.defaults": {
-      "bytes": 700,
-      "sha256": "55f100d281b3062ae70296f378530b85fc8ef8205097564627e331408edee080"
+      "bytes": 759,
+      "sha256": "3b56fe93bfb0b97ea3e512946a2fdbf892e35e64434aa64e140443bab59e7cac"
+    },
+    "firmware/tests/check_certificate_policy.py": {
+      "bytes": 4009,
+      "sha256": "2dd862075ef182c57885facf609775446f4c16ea80279c4d17d1f8ba409658db"
+    },
+    "firmware/tests/check_tls_config.py": {
+      "bytes": 3627,
+      "sha256": "3eccb1d4a09b778d44b31ae34f2048e7f1d9084f16bc68f748204b341481e457"
+    },
+    "firmware/tests/test_certificate_policy.c": {
+      "bytes": 1209,
+      "sha256": "81beda6a84a6a3e6c875f9aac56b8687477d75a7e9c15eeb9c2f5858e3934df0"
     },
     "firmware/tests/test_core.c": {
       "bytes": 8030,
       "sha256": "ba6d562f7b9e97d0746c917ed2d6cac4704768e27b5fed9fd2d49f5b69260d4e"
+    },
+    "firmware/tools/check_target_tls_guard.py": {
+      "bytes": 3297,
+      "sha256": "8475bc0c0e332f1174391a5938f09aa91c56bfd55c93e84bf4da1c2a02ad0534"
+    },
+    "firmware/tools/check_tls_config.py": {
+      "bytes": 1494,
+      "sha256": "3a3cff28cafbfa140e25fbf424b4c97606ee21d5bee3c9ed53b71fc1427fc6d0"
     },
     "firmware/tools/prepare_factory_csv.py": {
       "bytes": 4313,
@@ -451,16 +484,20 @@
       "sha256": "f311fba25f946b3367991d74ff84323926674e178fed2bdce976ac6c402ffd1a"
     },
     "scripts/engineering.py": {
-      "bytes": 7774,
-      "sha256": "2d6be20bcff1f788dfc0cc0a486478dd16556e315a9ed949738eee79daae4855"
+      "bytes": 8288,
+      "sha256": "3a3d9abd00eac9266dc495e7f26a0a8e9541bdfd428817620f9fd58b3a1417bd"
     },
     "scripts/local_runtime.py": {
       "bytes": 1919,
       "sha256": "973f7c672d859df6722d6c4a39f88ed444faeda73b29d271b50b46c882ab4141"
     },
     "scripts/package_release.py": {
-      "bytes": 6685,
-      "sha256": "6570e22b573930cdc9b7cd25d123f24349ea0ef2773bc268007ce82cf221c839"
+      "bytes": 6796,
+      "sha256": "fa6eb3ef39c7cab3d08673543bfd7dbbb0da38828a2fb8382dd4077012c5c182"
+    },
+    "scripts/source_manifest.py": {
+      "bytes": 1897,
+      "sha256": "c39bde4d4e39548fea88f21bccf93b3ce8f8d8fc24f21b66a0bb273d404f30af"
     },
     "uv.lock": {
       "bytes": 20578,

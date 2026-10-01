@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "validation_date": "2026-10-01",
-  "status": "WINDOWS_NATIVE_HOST_AND_REAL_TARGET_PASS_HARDWARE_UNTESTED",
+  "status": "HISTORICAL_WINDOWS_NATIVE_HOST_AND_TARGET_PASS_HARDWARE_UNTESTED",
   "host_tests": {
     "ctest_passed": 1,
     "malformed_json_cases": 2000,
@@ -29,21 +29,18 @@
     "image_bytes": 1121504,
     "actuation_enabled": false
   },
-  "artifacts_in_release": {
-    "carbentra_smart_switch.bin": {
-      "bytes": 1121504,
-      "sha256": "2073b39a0465d4c6fad1fb510e2f5909ce603b672b59094df28c421d49444725"
-    },
-    "bootloader/bootloader.bin": {
-      "bytes": 20832,
-      "sha256": "5522d9d89708842ebb05bc438ee10c0d54651c96fc41e8ef8a6feb5f27cde436"
-    },
-    "partition_table/partition-table.bin": {
-      "bytes": 3072,
-      "sha256": "7d1ecdcd22ccc7bd7b9aaa669247714f68dabb71982c16eadc8eb55cb6950174"
-    }
+  "physical_validation": {
+    "built": false,
+    "flashed": false,
+    "energized": false,
+    "production_credentials_created": false,
+    "RF_tested": false,
+    "calibrated": false
   },
-  "source_sha256": {
+  "current_evidence": "remediation-report.json",
+  "historical_sanitizers": "Earlier Linux ASan/UBSan evidence remains only in Git history; this Windows run does not claim sanitizer coverage.",
+  "source_binding": "Historical pre-remediation Windows run. These original source/artifact hashes are preserved, not claims about the current checkout; see remediation-report.json for new firmware checks.",
+  "historical_source_sha256": {
     "firmware/host/CMakeLists.txt": "49c0f05c9af95cada1800d2905acccf1a168b324fa046f0b728a64c4ba0f2e64",
     "firmware/.gitignore": "546f7860bff469a555483f4efc1d47904220d60ce9c932fd20a8a664271dd2b8",
     "firmware/CMakeLists.txt": "64b607b574c726a7b043036dde1cec2121e74f11b08a34974dfe981d13f79eb6",
@@ -69,15 +66,18 @@
     "firmware/tests/test_core.c": "ba6d562f7b9e97d0746c917ed2d6cac4704768e27b5fed9fd2d49f5b69260d4e",
     "firmware/tools/prepare_factory_csv.py": "cbdba380bdb9a3b32114b8e94c7e563e7adcef6a4c2cb12c6e562017431237dd"
   },
-  "physical_validation": {
-    "built": false,
-    "flashed": false,
-    "energized": false,
-    "production_credentials_created": false,
-    "RF_tested": false,
-    "calibrated": false
-  },
-  "current_evidence": "../verification/local-validation.json",
-  "historical_sanitizers": "Earlier Linux ASan/UBSan evidence remains only in Git history; this Windows run does not claim sanitizer coverage.",
-  "source_binding": "Published source bytes; native KiCad/JSON preserve exact bytes, ordinary code uses LF. Full builds passed after normalization. For v0.1.1, both host dependency paths were rebuilt with CMake 3.30.2 after a host-only CMake fix; unchanged target outputs retain the prior full-build evidence."
+  "historical_artifacts_in_release": {
+    "carbentra_smart_switch.bin": {
+      "bytes": 1121504,
+      "sha256": "2073b39a0465d4c6fad1fb510e2f5909ce603b672b59094df28c421d49444725"
+    },
+    "bootloader/bootloader.bin": {
+      "bytes": 20832,
+      "sha256": "5522d9d89708842ebb05bc438ee10c0d54651c96fc41e8ef8a6feb5f27cde436"
+    },
+    "partition_table/partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "7d1ecdcd22ccc7bd7b9aaa669247714f68dabb71982c16eadc8eb55cb6950174"
+    }
+  }
 }

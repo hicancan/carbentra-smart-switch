@@ -40,6 +40,7 @@ def host(build):
     run(['ctest', '--test-dir', build, '--output-on-failure'])
 
 def target(build):
+    run([sys.executable, ROOT / 'firmware/tools/check_tls_config.py'])
     sdk = Path(os.environ['IDF_PATH'])
     expected = json.loads((ROOT / 'firmware/dependencies.lock.json').read_text(encoding='utf-8'))['sdk']['git_commit']
     commit = subprocess.check_output(['git', '-C', str(sdk), 'rev-parse', 'HEAD'], text=True).strip()
@@ -50,15 +51,21 @@ def target(build):
     for line in exported.splitlines():
         if '=' in line and line.split('=', 1)[0] in ('PATH', 'OPENOCD_SCRIPTS', 'IDF_CCACHE_ENABLE', 'ESP_ROM_ELF_DIR', 'ESP_IDF_VERSION', 'IDF_DEACTIVATE_FILE_PATH'):
             key, value = line.split('=', 1)
-            os.environ[key] = value.replace('%PATH%', os.environ.get('PATH', ''))
+            inherited_path = os.environ.get('PATH', '')
+            os.environ[key] = value.replace('%PATH%', inherited_path).replace('$PATH', inherited_path)
     os.environ['CMAKE_BUILD_PARALLEL_LEVEL'] = '6'
     config = build.parent / 'sdkconfig'
     shutil.copy2(ROOT / 'firmware/sdkconfig', config)
     run([python, sdk / 'tools/idf.py', '-C', ROOT / 'firmware', '-B', build,
          '-D', 'SDKCONFIG=' + config.as_posix(), '-D', 'IDF_TARGET=esp32c3', 'build'])
     content = config.read_text(encoding='utf-8')
-    assert 'CONFIG_CARBENTRA_SWITCH_ALLOW_ACTUATION=y' not in content
-    print('PASS: ESP32-C3 image built with physical actuation disabled')
+    run([sys.executable, ROOT / 'firmware/tools/check_tls_config.py', config])
+    if os.name == 'posix':
+        run([sys.executable, ROOT / 'firmware/tools/check_target_tls_guard.py', build,
+             '--report', build.parent / 'target-tls-guard.json'])
+    if 'CONFIG_CARBENTRA_SWITCH_ALLOW_ACTUATION=y' in content:
+        raise RuntimeError('Development image must keep physical actuation disabled')
+    print('PASS: ESP32-C3 image built with TLS date checks enabled and physical actuation disabled')
 
 
 def electronics(work):

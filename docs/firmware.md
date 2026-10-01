@@ -27,6 +27,22 @@ The MCP39F511A and its analog input circuit are in the hot mains domain. UART cr
 
 All connections use `mqtts://hostname[:port]`, a supplied CA trust anchor, server-hostname validation and a supplied client certificate/private key. Firmware rejects insecure MQTT URIs and never enables skip-CN checks. Broker ACLs must bind the client identity to its own namespace; authenticated controller clients may publish only to the intended device command topics. SNTP establishes usable wall time for certificate checks before MQTT starts. Command freshness uses a boot-relative clock and does not trust an arbitrary controller wall clock.
 
+Both `sdkconfig.defaults` and the maintained `sdkconfig` require
+`CONFIG_MBEDTLS_HAVE_TIME=y` and `CONFIG_MBEDTLS_HAVE_TIME_DATE=y`.
+`main/tls_policy.h`, compiled in the actual network translation unit, rejects
+missing ESP-IDF options, missing effective mbedTLS time/date macros, or insecure
+TLS verification. The target coordinator checks the generated configuration too.
+
+**Time-source threat boundary:** the current bootstrap uses unauthenticated SNTP
+(`pool.ntp.org`) and waits for a wall clock at least 2025-01-01. This is a plausibility
+gate, not authenticated time or rollback protection. Date validation is against
+that system clock; an attacker able to manipulate SNTP can affect certificate
+validity decisions. CA and hostname checks remain required, but they do not
+authenticate the SNTP clock. Deploy only where that time-source/network assumption
+is acceptable; a hostile-time threat model requires a separately reviewed signed
+time/bootstrap design before release. Switch does not inherit Plug's signed-time
+implementation. No missing-time or date-check-disabled fallback is provided.
+
 Topics:
 
 - `carbentra/switch/<device_id>/command`: controller→device, QoS1, **not retained**
@@ -87,6 +103,16 @@ The default bench build does not burn security eFuses, enable irreversible Secur
 Host regression groups compile the real C core and cJSON decoder with strict warnings and CTest on Windows. They cover offline keys/held-key boot, debounce, all channel bounds, maximum64-bit sequence and overflow, replay/idempotency/conflicts, old-boot rejection, expiry, official meter request bytes, little-endian decoding, checksum/length errors, import/export sign, missing intervals, monotonic delta handling, checkpoint corruption/profile mismatch, strict JSON and2,000 malformed-input cases. Current Windows evidence does not claim UBSan or LeakSanitizer. Earlier Linux sanitizer results remain historical.
 
 Target build status is recorded in firmware/build-report.json when compilation completes. No ESP32 board, relay, lamp, radio link, broker deployment, live credentials or mains meter was exercised here. Hardware UART timing, polarity, real calibration, RF coexistence, power-loss behavior, contact/inrush performance and physical safety remain bench/engineering validation tasks. Generated images and presentation assets are owned by the root presentation workflow, not firmware.
+
+The TLS remediation has three separate verification levels: the maintained
+`tests/check_tls_config.py` regression checks both configuration files and compiles
+positive/negative fixtures against the actual guard; `tests/check_certificate_policy.py`
+exercises a separately compiled **host** mbedTLS verifier with valid, expired,
+not-yet-valid, wrong-CA and wrong-hostname synthetic certificates; a pinned ESP-IDF
+target build/real MQTT handshake remains a separate gate. The host library's date
+behavior must never be reported as ESP-IDF target behavior. Existing checked-in
+build/source manifests describe their original source hashes and predate this
+remediation until a new pinned target build is recorded.
 
 ## Primary references
 
