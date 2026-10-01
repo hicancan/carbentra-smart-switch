@@ -44,16 +44,16 @@
       "sha256": "04886d72293c1fc8165bcb50ed2d6fa2f5f904bf00adfdaba1c3370790ac14db"
     },
     "LOCAL_BUILD.md": {
-      "bytes": 6989,
-      "sha256": "35d0b68901d4e1a8540247e5e721a70293d5e02bf62453facf4ccaa407c6e54c"
+      "bytes": 8970,
+      "sha256": "c786c8e244a4f37a0805191fac67be5cebdc9e627332508df2c35cb68eb134e6"
     },
     "README.assets/hero.png": {
       "bytes": 984231,
       "sha256": "1d6c7a4c5e30fe95b050c8aaf69a51a8035b2cdd2446ef4424a780650e936aeb"
     },
     "README.md": {
-      "bytes": 4358,
-      "sha256": "fc8bc9f83d5fa4ce570217eb0e9be807046fb381adbce974f091caffc8c733f8"
+      "bytes": 4608,
+      "sha256": "b793302c17a7558121d093a11587856aabdb1232b4350e832fb92bb01b2ec314"
     },
     "docs/device-capabilities.json": {
       "bytes": 2127,
@@ -260,8 +260,8 @@
       "sha256": "64b607b574c726a7b043036dde1cec2121e74f11b08a34974dfe981d13f79eb6"
     },
     "firmware/README.md": {
-      "bytes": 3401,
-      "sha256": "f06c0a689a34aa7520cd4acd6766910c33ed1abc6614ddaf58313e81cbe03e71"
+      "bytes": 3699,
+      "sha256": "7b94c592cdc45ce15b87e5048453ea6b6df513e86cac2814cbddd0f91eb3b2a5"
     },
     "firmware/THIRD_PARTY_NOTICES.md": {
       "bytes": 1349,
@@ -432,8 +432,8 @@
       "sha256": "ba6d562f7b9e97d0746c917ed2d6cac4704768e27b5fed9fd2d49f5b69260d4e"
     },
     "firmware/tools/check_target_tls_guard.py": {
-      "bytes": 3297,
-      "sha256": "8475bc0c0e332f1174391a5938f09aa91c56bfd55c93e84bf4da1c2a02ad0534"
+      "bytes": 4390,
+      "sha256": "f48208657035878c13c7b03b3081341f5f4be44e02aa97a206bda8b80785e6e5"
     },
     "firmware/tools/check_tls_config.py": {
       "bytes": 1494,
@@ -480,28 +480,40 @@
       "sha256": "5eeb55faf1f0e01f1762f6907ffb54812f3678c2476164adf6f823e2d814639c"
     },
     "scripts/dev.ps1": {
-      "bytes": 1083,
-      "sha256": "f311fba25f946b3367991d74ff84323926674e178fed2bdce976ac6c402ffd1a"
+      "bytes": 1105,
+      "sha256": "acb7101919fa9e70c8bbea02031c41138157a16e67408157214776bc1016171b"
     },
     "scripts/engineering.py": {
-      "bytes": 8288,
-      "sha256": "3a3d9abd00eac9266dc495e7f26a0a8e9541bdfd428817620f9fd58b3a1417bd"
+      "bytes": 8591,
+      "sha256": "00d394a5d9d7bf3beeaa0b3ab2ba631c068e221a5067e33e652beca1f5cd7ea0"
     },
     "scripts/local_runtime.py": {
       "bytes": 1919,
       "sha256": "973f7c672d859df6722d6c4a39f88ed444faeda73b29d271b50b46c882ab4141"
     },
     "scripts/package_release.py": {
-      "bytes": 6796,
-      "sha256": "fa6eb3ef39c7cab3d08673543bfd7dbbb0da38828a2fb8382dd4077012c5c182"
+      "bytes": 7706,
+      "sha256": "ee16bc88cb33882bbe50b809c6fa3fa506a2b55a46977156b218644b6c821d0c"
+    },
+    "scripts/release_contract.py": {
+      "bytes": 6138,
+      "sha256": "f928f20a84be7bf4b04aba94ddbdf40a753be8d373f95189dcffd9f72d931de3"
     },
     "scripts/source_manifest.py": {
-      "bytes": 1897,
-      "sha256": "c39bde4d4e39548fea88f21bccf93b3ce8f8d8fc24f21b66a0bb273d404f30af"
+      "bytes": 1911,
+      "sha256": "3e1dd07dd1d32f05107810131a3bbba7d29856377b30887b3830858c731004b5"
+    },
+    "scripts/tests/check_release.py": {
+      "bytes": 6673,
+      "sha256": "89b98813ee0d354180ecca595cf98fd824218b60ff5cf2044d730203d84ddc7b"
     },
     "uv.lock": {
       "bytes": 20578,
       "sha256": "bf7b12ffbc889996cb64230a582ae746e3522b272c37e4823e05ee5060f5e083"
+    },
+    "verification/current-firmware-validation.json": {
+      "bytes": 10305,
+      "sha256": "5461df25bb8930e42dcecb7ec2018110d952e742047a01cdac71e574f2031b9c"
     }
   }
 }

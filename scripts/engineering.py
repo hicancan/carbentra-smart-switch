@@ -9,6 +9,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+from release_contract import source_inventory, record_binding
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -60,9 +61,8 @@ def target(build):
          '-D', 'SDKCONFIG=' + config.as_posix(), '-D', 'IDF_TARGET=esp32c3', 'build'])
     content = config.read_text(encoding='utf-8')
     run([sys.executable, ROOT / 'firmware/tools/check_tls_config.py', config])
-    if os.name == 'posix':
-        run([sys.executable, ROOT / 'firmware/tools/check_target_tls_guard.py', build,
-             '--report', build.parent / 'target-tls-guard.json'])
+    run([sys.executable, ROOT / 'firmware/tools/check_target_tls_guard.py', build,
+         '--report', build.parent / 'target-tls-guard.json'])
     if 'CONFIG_CARBENTRA_SWITCH_ALLOW_ACTUATION=y' in content:
         raise RuntimeError('Development image must keep physical actuation disabled')
     print('PASS: ESP32-C3 image built with TLS date checks enabled and physical actuation disabled')
@@ -108,7 +108,7 @@ def mechanical(work, render=False):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('action', choices=['host', 'target', 'electronics', 'mechanical', 'render', 'all'])
+    parser.add_argument('action', choices=['host', 'target', 'electronics', 'mechanical', 'render', 'firmware', 'all'])
     parser.add_argument('--build-root', type=Path, required=True)
     args = parser.parse_args()
     base = args.build_root.resolve()
@@ -123,7 +123,8 @@ def main():
     os.environ['PYTHONPATH'] = str(ROOT / 'scripts')
     if os.environ.get('INKSCAPE_BIN'):
         os.environ['PATH'] = os.environ['INKSCAPE_BIN'] + os.pathsep + os.environ['PATH']
-    actions = ['host', 'target', 'electronics', 'mechanical'] if args.action == 'all' else [args.action]
+    actions = ['host', 'target', 'electronics', 'mechanical'] if args.action == 'all' else ['host', 'target'] if args.action == 'firmware' else [args.action]
+    firmware_before = source_inventory(ROOT)
     report = {'schema_version': 1, 'platform': sys.platform, 'python': sys.version, 'checks': {}, 'physical_hardware_tested': False}
     for action in actions:
         if action in ('host', 'target'):
@@ -132,6 +133,8 @@ def main():
             work = stage(run_dir / action)
             electronics(work) if action == 'electronics' else mechanical(work, render=action == 'render')
         report['checks'][action] = 'passed'
+    if any(action in actions for action in ('host', 'target')):
+        report['firmware_binding'] = record_binding(ROOT, run_dir, firmware_before, report['checks'])
     report['source_sha256'] = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '.venv' not in p.parts and p.suffix in ('.c', '.h', '.py', '.ps1', '.kicad_pcb', '.kicad_sch')}
     (run_dir / 'validation.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print('VALIDATED_OUTPUT', run_dir, flush=True)

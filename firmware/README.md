@@ -25,3 +25,5 @@ physically tested.
 5. A qualified factory process must establish and verify meter calibration and the exact register profile before energy values become available. Firmware does not run automatic calibration or change meter EEPROM/configuration.
 
 See [docs/firmware.md](../docs/firmware.md) for the protocol, factory partition format, calibration units, persistence limitations and official references.
+
+Current Windows firmware/release validation is recorded in `../verification/current-firmware-validation.json`. `remediation-report.json` preserves the earlier Linux run; it is packaged only as historical evidence. See `../LOCAL_BUILD.md` for the source-bound `firmware` action and release checks.

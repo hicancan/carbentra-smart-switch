@@ -1,11 +1,11 @@
 param(
-    [ValidateSet('host','target','electronics','mechanical','render','all')][string]$Action = 'all',
+    [ValidateSet('host','target','electronics','mechanical','render','firmware','all')][string]$Action = 'all',
     [Parameter(Mandatory=$true)][string]$BuildRoot
 )
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
 if (!(Test-Path -LiteralPath "$root/.venv/Scripts/python.exe")) { throw 'Run uv venv --python 3.12, then uv sync --frozen first.' }
-if ($Action -in @('host','all') -and !(Get-Command cl.exe -ErrorAction SilentlyContinue)) {
+if ($Action -in @('host','firmware','all') -and !(Get-Command cl.exe -ErrorAction SilentlyContinue)) {
     $vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio/Installer/vswhere.exe'
     $vs = & $vswhere -latest -products '*' -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
     if (!$vs) { throw 'Install Visual Studio C++ tools or run in its developer PowerShell.' }

@@ -43,3 +43,5 @@
 仅针对普通照明研究，不用于消防应急或其他安全关键照明。远程 OFF 不构成维修隔离；一次保护元件和最终负载能力必须按现场条件验证。
 
 许可证范围见 [LICENSES.md](LICENSES.md)。本地 KiCad 库、SDK、厂商资料继续遵守各自许可；参见 [电路第三方说明](electronics/THIRD_PARTY.md)和[固件第三方说明](firmware/THIRD_PARTY_NOTICES.md)。
+
+本次 Windows 固件与发布回归见 [当前固件验证](verification/current-firmware-validation.json)。打包要求当前来源和实际目标字节一致；历史 CAD/媒体复用独立标注，未重新运行实物、CAD 或渲染验收。

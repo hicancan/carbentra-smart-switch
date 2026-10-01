@@ -26,7 +26,7 @@ def main():
     if args.write:
         report = {'schema_version': 2, 'binding': 'Exact current checkout bytes for release staging; this inventory does not claim any new CAD, media or physical validation.',
                   'excluded_historical_reports_and_self': sorted(EXCLUDED), 'files': files}
-        MANIFEST.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+        MANIFEST.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8', newline='\n')
     else:
         recorded = json.loads(MANIFEST.read_text(encoding='utf-8'))['files']
         changed = sorted(name for name in recorded.keys() | files.keys() if recorded.get(name) != files.get(name))

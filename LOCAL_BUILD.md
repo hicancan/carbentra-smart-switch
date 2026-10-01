@@ -65,7 +65,7 @@ This checks valid/expired/future/wrong-CA/wrong-hostname certificates using that
 host library. Record its version. It does not replace a pinned ESP-IDF target
 build or MQTT handshake tests on the ESP32-C3.
 
-On POSIX hosts, target builds additionally run `firmware/tools/check_target_tls_guard.py`
+On Windows and POSIX hosts, target builds additionally run `firmware/tools/check_target_tls_guard.py`
 against the generated compilation database. It recompiles the actual `network.c`
 with its real ESP32-C3 compiler/SDK headers, checks the successful generated config,
 and requires compilation to fail when time/date checks are disabled or insecure
@@ -82,3 +82,44 @@ After intentional source changes and completed relevant tests, refresh it using
 `python scripts/source_manifest.py --write`. This records exact checkout bytes; it
 does not rerun or renew the historical Windows/CAD/media qualification reports.
 The current firmware-only evidence is `firmware/remediation-report.json`.
+
+
+## Firmware release without rerunning CAD
+
+With the SDK environment above, run the real host suite and MCU build together:
+
+```powershell
+.\scripts\dev.ps1 -Action firmware -BuildRoot $build
+```
+
+The printed run directory contains `validation.json`, binding firmware/build
+inputs captured before and after the run, compiled target/configuration bytes,
+and safety checks. Switch also runs actual target TLS compile-negative controls
+on Windows. This action does not run CAD, rendering or physical verification.
+
+Set `$run` to that printed directory and `$release` to an external output directory:
+
+```powershell
+.\.venv\Scripts\python.exe scripts/package_release.py --build-output $run --destination $release
+```
+
+Optionally add `--historical-assets $earlierZip` and
+`--historical-assets-sha256 $publishedSha256` to retain earlier CAD/media. The
+archive and every member are hash-checked, and its CAD/media input inventory must
+match the current checkout. Its old firmware is excluded. Historical reports go
+under `verification/historical-assets`; the current target report is
+`verification/firmware-build-run.json`. Missing source/artifact binding, altered
+target/configuration, missing safety proof or stale firmware inputs block output.
+Earlier remediation reports are historical and cannot substitute for this run.
+
+The regression uses real current and earlier target bytes in external copies:
+
+```powershell
+.\.venv\Scripts\python.exe scripts/tests/check_release.py --build-output $run --historical-assets $earlierZip --historical-assets-sha256 $publishedSha256 --output $externalTestDirectory
+```
+
+After intentional source/report edits, refresh `scripts/source_manifest.py --write`
+before packaging. This is an inventory operation, never a substitute for a build.
+Latest executed firmware and packaging proof:
+`verification/current-firmware-validation.json`. Earlier Linux and Windows/CAD
+reports retain their original execution hashes and qualification limits.

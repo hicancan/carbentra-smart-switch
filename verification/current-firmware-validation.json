@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "validated_at_utc": "2026-10-01T15:34:47.204565+00:00",
+  "status": "WINDOWS_FIRMWARE_AND_RELEASE_REGRESSIONS_PASS_HARDWARE_UNTESTED",
+  "scope": "Current source-bound host and actual MCU target; earlier CAD/media reused only after source/hash checks, not rerun",
+  "platform": "Windows x64",
+  "tools": {
+    "python": "3.12.13",
+    "uv": "0.11.17",
+    "host_compiler": "MSVC 19.44.35228.0",
+    "target_sdk": "ESP-IDF 5.4.3"
+  },
+  "checks": {
+    "host": "passed",
+    "target": "passed"
+  },
+  "firmware_binding": {
+    "schema_version": 1,
+    "source": {
+      "firmware/CMakeLists.txt": {
+        "bytes": 119,
+        "sha256": "64b607b574c726a7b043036dde1cec2121e74f11b08a34974dfe981d13f79eb6"
+      },
+      "firmware/core/meter.c": {
+        "bytes": 3707,
+        "sha256": "fbb6eea1e954fe3cefcd3b02fd6841d792a215f2606461b775469ab00c96826b"
+      },
+      "firmware/core/meter.h": {
+        "bytes": 1582,
+        "sha256": "3cea38ecc2c7ad83d7f222e6c6f0b48a79a371f2d62611745f64ebd9534e67de"
+      },
+      "firmware/core/switch_core.c": {
+        "bytes": 5536,
+        "sha256": "2e804ab363d55fb6ececd78e3ab713485e4b15c0a4acbd093befefd76b192d4d"
+      },
+      "firmware/core/switch_core.h": {
+        "bytes": 2431,
+        "sha256": "7be0725f6417e835560ed786cce40c19ec3fed93ebeb58be6cde939d93f266e1"
+      },
+      "firmware/dependencies.lock.json": {
+        "bytes": 517,
+        "sha256": "416f9a8af682c9afa377a0f194fe12845d622b7a79b3826510c6ad87c0515e62"
+      },
+      "firmware/host/CMakeLists.txt": {
+        "bytes": 1490,
+        "sha256": "69e371037a03181b095cd13a6280fa4c84bedf4a0f430636e99bb2060c94352c"
+      },
+      "firmware/main/CMakeLists.txt": {
+        "bytes": 306,
+        "sha256": "ae6edc5a2364804107af55cb0840ac9f235e713aa68734085150985f41f01764"
+      },
+      "firmware/main/Kconfig.projbuild": {
+        "bytes": 353,
+        "sha256": "07cff166da8965cce914bc1f225852a63316329d72590804cdacdf591c7a0765"
+      },
+      "firmware/main/app_main.c": {
+        "bytes": 7033,
+        "sha256": "294bbebbcf252876d321835050d147558a33a0dab95f528a1454a54e66e95f1e"
+      },
+      "firmware/main/app_state.h": {
+        "bytes": 441,
+        "sha256": "eac7f7098bf4b8a4f952b8874a46069a51e58a43beff2ecc1cce240a0eedf65e"
+      },
+      "firmware/main/board.h": {
+        "bytes": 345,
+        "sha256": "0fbca7455174d1fb02d79d70b288bca5a43cd94a1db5e83ca93d15269605d5bb"
+      },
+      "firmware/main/command_json.c": {
+        "bytes": 1852,
+        "sha256": "ed28774717cde8991d1c060399a51babc33c367e2d9733b53be22e9d88e18ac6"
+      },
+      "firmware/main/command_json.h": {
+        "bytes": 167,
+        "sha256": "3db1d133f46109be4cb24eb8c0952beac23ad4b9589825a9b2a70e8c1a891edc"
+      },
+      "firmware/main/device_config.c": {
+        "bytes": 4493,
+        "sha256": "b7d8347b3bed863501d621f669f3d8e2ff516750e9e6631edc7a9db6732fd628"
+      },
+      "firmware/main/device_config.h": {
+        "bytes": 612,
+        "sha256": "f87a69aff04b793a36ce4df3930d4100bbe60ed6c47de337e427ec9b21a0fca6"
+      },
+      "firmware/main/network.c": {
+        "bytes": 12304,
+        "sha256": "54df8176d6fcfeedb26605c8c82ab23a520266a7495377d4e316505c68e06169"
+      },
+      "firmware/main/network.h": {
+        "bytes": 135,
+        "sha256": "18fdae1eec19a84b93e7d45e412e71676897dc680eb02b14b6170538eeb874b0"
+      },
+      "firmware/main/tls_policy.h": {
+        "bytes": 811,
+        "sha256": "8d7353ea438c352e66a6c88f223fea8d48aa66c39cfb18ddc5cd5af7ad500111"
+      },
+      "firmware/partitions.csv": {
+        "bytes": 201,
+        "sha256": "eaef803a3de2717770a40446c7ff874fa1d0eb5c884c8b7584f2c0324ba25367"
+      },
+      "firmware/sdkconfig": {
+        "bytes": 72583,
+        "sha256": "41093dc62f081a7564296e2b00d1a1c369ccb7019fd73f1e269d1bd6bf353111"
+      },
+      "firmware/sdkconfig.defaults": {
+        "bytes": 759,
+        "sha256": "3b56fe93bfb0b97ea3e512946a2fdbf892e35e64434aa64e140443bab59e7cac"
+      },
+      "firmware/tests/check_certificate_policy.py": {
+        "bytes": 4009,
+        "sha256": "2dd862075ef182c57885facf609775446f4c16ea80279c4d17d1f8ba409658db"
+      },
+      "firmware/tests/check_tls_config.py": {
+        "bytes": 3627,
+        "sha256": "3eccb1d4a09b778d44b31ae34f2048e7f1d9084f16bc68f748204b341481e457"
+      },
+      "firmware/tests/test_certificate_policy.c": {
+        "bytes": 1209,
+        "sha256": "81beda6a84a6a3e6c875f9aac56b8687477d75a7e9c15eeb9c2f5858e3934df0"
+      },
+      "firmware/tests/test_core.c": {
+        "bytes": 8030,
+        "sha256": "ba6d562f7b9e97d0746c917ed2d6cac4704768e27b5fed9fd2d49f5b69260d4e"
+      },
+      "firmware/tools/check_target_tls_guard.py": {
+        "bytes": 4390,
+        "sha256": "f48208657035878c13c7b03b3081341f5f4be44e02aa97a206bda8b80785e6e5"
+      },
+      "firmware/tools/check_tls_config.py": {
+        "bytes": 1494,
+        "sha256": "3a3cff28cafbfa140e25fbf424b4c97606ee21d5bee3c9ed53b71fc1427fc6d0"
+      },
+      "firmware/tools/prepare_factory_csv.py": {
+        "bytes": 4313,
+        "sha256": "cbdba380bdb9a3b32114b8e94c7e563e7adcef6a4c2cb12c6e562017431237dd"
+      },
+      "pyproject.toml": {
+        "bytes": 277,
+        "sha256": "5eeb55faf1f0e01f1762f6907ffb54812f3678c2476164adf6f823e2d814639c"
+      },
+      "scripts/dev.ps1": {
+        "bytes": 1105,
+        "sha256": "acb7101919fa9e70c8bbea02031c41138157a16e67408157214776bc1016171b"
+      },
+      "scripts/engineering.py": {
+        "bytes": 8591,
+        "sha256": "00d394a5d9d7bf3beeaa0b3ab2ba631c068e221a5067e33e652beca1f5cd7ea0"
+      },
+      "scripts/package_release.py": {
+        "bytes": 7706,
+        "sha256": "ee16bc88cb33882bbe50b809c6fa3fa506a2b55a46977156b218644b6c821d0c"
+      },
+      "scripts/release_contract.py": {
+        "bytes": 6138,
+        "sha256": "f928f20a84be7bf4b04aba94ddbdf40a753be8d373f95189dcffd9f72d931de3"
+      },
+      "uv.lock": {
+        "bytes": 20578,
+        "sha256": "bf7b12ffbc889996cb64230a582ae746e3522b272c37e4823e05ee5060f5e083"
+      }
+    },
+    "artifacts": {
+      "target/carbentra_smart_switch.bin": {
+        "bytes": 1122480,
+        "sha256": "9ab264f7f1cc124e4ee89f3cc10d7f4b23e84c043ea8436452a3e21137b82e8d"
+      },
+      "target/carbentra_smart_switch.elf": {
+        "bytes": 12408484,
+        "sha256": "354a0939e40d2673ad979342ce309bcb4a5ff9aab941a46566246f79a1d7ffda"
+      },
+      "target/bootloader/bootloader.bin": {
+        "bytes": 20832,
+        "sha256": "3349dfd94f0d8102679c404e85a7f1d18a5d8ea6714f86c6ec44024322829696"
+      },
+      "target/partition_table/partition-table.bin": {
+        "bytes": 3072,
+        "sha256": "7d1ecdcd22ccc7bd7b9aaa669247714f68dabb71982c16eadc8eb55cb6950174"
+      },
+      "sdkconfig": {
+        "bytes": 72583,
+        "sha256": "41093dc62f081a7564296e2b00d1a1c369ccb7019fd73f1e269d1bd6bf353111"
+      },
+      "target-tls-guard.json": {
+        "bytes": 683,
+        "sha256": "d021702cba5ce407ba521d62f18dc0b8fb791755625c89531b2228d2bc4e0544"
+      }
+    }
+  },
+  "packaging_regression": {
+    "scope": "Actual current build and earlier release bytes; offline packaging only",
+    "physical_hardware_tested": false,
+    "results": [
+      {
+        "case": "current_target_with_historical_cad",
+        "expected": "accepted",
+        "passed": true
+      },
+      {
+        "case": "old_target_new_report",
+        "expected": "rejected",
+        "passed": true
+      },
+      {
+        "case": "old_unbound_build_record",
+        "expected": "rejected",
+        "passed": true
+      },
+      {
+        "case": "source_drift",
+        "expected": "rejected",
+        "passed": true
+      },
+      {
+        "case": "missing_target_member",
+        "expected": "rejected",
+        "passed": true
+      },
+      {
+        "case": "unsafe_configuration_with_refreshed_hash",
+        "expected": "rejected",
+        "passed": true
+      },
+      {
+        "case": "actuation_enabled_with_refreshed_hash",
+        "expected": "rejected",
+        "passed": true
+      },
+      {
+        "case": "wrong_historical_archive_hash",
+        "expected": "rejected",
+        "passed": true
+      }
+    ]
+  },
+  "packaging_test_source_sha256": "89b98813ee0d354180ecca595cf98fd824218b60ff5cf2044d730203d84ddc7b",
+  "build_log_sha256": "8c6ea00df0059d98a6a893ced08d98923b4b8135bf03ca50f0b6cb21c1dcb731",
+  "host_results": {
+    "ctest": "2/2 passed",
+    "assertions": null,
+    "independent_hmac_vectors": null,
+    "current_sanitizers_executed": false
+  },
+  "physical_validation": {
+    "flashed": false,
+    "actuation": false,
+    "RF_tested": false,
+    "production_credentials_created": false,
+    "deployment_ready": false
+  },
+  "not_rerun": [
+    "CAD/ERC/DRC",
+    "mechanical generation",
+    "GPU rendering",
+    "physical hardware"
+  ],
+  "historical_reports": [
+    "firmware/build-report.json",
+    "firmware/remediation-report.json",
+    "verification/local-validation.json"
+  ],
+  "target_tls_guard": {
+    "scope": "actual_target_network_compile_only",
+    "hardware_tested": false,
+    "tls_handshake_tested": false,
+    "checks": [
+      {
+        "case": "generated_config",
+        "expected_compile_success": true,
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "date_disabled",
+        "expected_compile_success": false,
+        "returncode": 1,
+        "passed": true
+      },
+      {
+        "case": "time_disabled",
+        "expected_compile_success": false,
+        "returncode": 1,
+        "passed": true
+      },
+      {
+        "case": "insecure_enabled",
+        "expected_compile_success": false,
+        "returncode": 1,
+        "passed": true
+      }
+    ]
+  },
+  "packaging_log_sha256": "529ff948d66509e4873bc82323fa2e68bd839ef75d5d18c27a7aabaf14378070",
+  "historical_asset_reuse": {
+    "archive": "carbentra-smart-switch-engineering-20261001.zip",
+    "sha256": "f35a3cb77e11142c31b05578c03649c7dbe68e6e972df619698edcc4fb74d4c0",
+    "source_files_matched": 54,
+    "scope": "Unchanged CAD and media reused from this earlier release; not rerun for the current firmware build.",
+    "current_firmware_inherited": false,
+    "electronics_attribution_and_context_preserved": [
+      "THIRD_PARTY.md",
+      "reference-sources.json",
+      "bom.csv",
+      "pinmap.csv",
+      "manifest.json"
+    ]
+  }
+}
