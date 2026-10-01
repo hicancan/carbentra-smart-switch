@@ -1,0 +1,18 @@
+{
+  "sdk": {
+    "name": "ESP-IDF",
+    "version": "5.4.3",
+    "git_commit": "ea1c174c1cbb7348bd8ba0ff1eb306246938dd80",
+    "source": "https://github.com/espressif/esp-idf/tree/v5.4.3"
+  },
+  "sdk_submodules": {
+    "esp-mqtt": "cac1552e62b0474c162547b7cce345d7cd1aecfe",
+    "cJSON": "c859b25da02955fef659d658b8f324b5cde87be3"
+  },
+  "toolchain": {
+    "name": "riscv32-esp-elf-gcc",
+    "version": "14.2.0",
+    "distribution": "crosstool-NG esp-14.2.0_20250730"
+  },
+  "third_party_components_outside_sdk": []
+}

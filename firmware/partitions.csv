@@ -1,0 +1,6 @@
+# Name,Type,SubType,Offset,Size,Flags
+nvs,data,nvs,0x9000,0x6000,
+phy_init,data,phy,0xf000,0x1000,
+factory,data,nvs,0x10000,0x10000,
+app0,app,factory,0x20000,0x280000,
+energy,data,nvs,0x2a0000,0x6000,

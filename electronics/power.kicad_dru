@@ -1,0 +1,4 @@
+(version 1)
+(rule "default" (constraint clearance (min 0.2mm)))
+(rule "switched_mains_3mm_OVCIII_4kV" (condition "(A.NetName == 'N_IN' && B.NetName != 'H_DIV1' && B.NetName != 'N_IN' && B.NetName != '' && !B.NetName.startsWith('C_')) || (B.NetName == 'N_IN' && A.NetName != 'H_DIV1' && A.NetName != 'N_IN' && A.NetName != '' && !A.NetName.startsWith('C_')) || ((A.NetName == 'L_IN' || A.NetName.startsWith('L_OUT')) && A.NetName != B.NetName && B.NetName != '' && !B.NetName.startsWith('C_')) || ((B.NetName == 'L_IN' || B.NetName.startsWith('L_OUT')) && A.NetName != B.NetName && A.NetName != '' && !A.NetName.startsWith('C_'))") (constraint clearance (min 3mm)))
+(rule "hot_cold_reinforced_target" (condition "(A.NetName.startsWith('C_') && !B.NetName.startsWith('C_') && B.NetName != '') || (B.NetName.startsWith('C_') && !A.NetName.startsWith('C_') && A.NetName != '')") (constraint clearance (min 8mm)))

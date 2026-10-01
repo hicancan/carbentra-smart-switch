@@ -1,0 +1,1849 @@
+{
+  "status": "unqualified engineering prototype",
+  "parts": [
+    {
+      "ref": "J1",
+      "value": "L N L1 L2 L3",
+      "fp": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-5-5.08_1x05_P5.08mm_Horizontal",
+      "nets": {
+        "1": "L_IN",
+        "2": "N_IN",
+        "3": "L_OUT1",
+        "4": "L_OUT2",
+        "5": "L_OUT3"
+      },
+      "xy": [
+        7,
+        6
+      ],
+      "sch": [
+        80,
+        100
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Phoenix Contact MKDS 1,5/5-5,08",
+      "source": "https://www.phoenixcontact.com/en-us/products/pcb-terminal-block-mkds-15-5-508-1715750"
+    },
+    {
+      "ref": "F1",
+      "value": "T2A 277VAC / 1500A BC",
+      "fp": "Switch:UMT_H",
+      "nets": {
+        "1": "L_IN",
+        "2": "H_GND"
+      },
+      "xy": [
+        18,
+        15
+      ],
+      "sch": [
+        150,
+        95
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "SCHURTER 3403.0277.23",
+      "source": "https://www.schurter.com/en/datasheet/typ_UMT-H.pdf"
+    },
+    {
+      "ref": "PS1",
+      "value": "RAC05-05SK/277",
+      "fp": "Switch:RAC05_05SK_277",
+      "nets": {
+        "1": "N_IN",
+        "5": "H_GND",
+        "7": "C_5V",
+        "9": "C_GND"
+      },
+      "xy": [
+        22,
+        47
+      ],
+      "sch": [
+        110,
+        180
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "RAC05-05SK/277",
+      "source": "https://recom-power.com/pdf/Powerline_AC-DC/RAC05-K_277.pdf"
+    },
+    {
+      "ref": "RV1",
+      "value": "TMOV14RP275E",
+      "fp": "Switch:TMOV14",
+      "nets": {
+        "1": "N_IN",
+        "2": "H_GND"
+      },
+      "xy": [
+        17,
+        24
+      ],
+      "sch": [
+        190,
+        160
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Littelfuse TMOV14RP275E (thermal protected)",
+      "source": "https://www.littelfuse.com/products/overvoltage-protection/varistors/thermally-protected/tmov"
+    },
+    {
+      "ref": "K1",
+      "value": "G5Q-1A DC5",
+      "fp": "Relay_THT:Relay_SPST_Omron-G5Q-1A",
+      "nets": {
+        "1": "C_COIL1",
+        "5": "C_5V",
+        "2": "H_LOAD",
+        "3": "L_OUT1"
+      },
+      "xy": [
+        56,
+        4
+      ],
+      "sch": [
+        350,
+        100
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 180,
+      "mpn": "G5Q-1A DC5",
+      "source": "https://components.omron.com/sites/default/files/datasheet_pdf/J155-E1.pdf"
+    },
+    {
+      "ref": "Q1",
+      "value": "AO3400A",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "C_GATE1",
+        "2": "C_GND",
+        "3": "C_COIL1"
+      },
+      "xy": [
+        61,
+        8
+      ],
+      "sch": [
+        350,
+        185
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "AO3400A",
+      "source": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf"
+    },
+    {
+      "ref": "R1",
+      "value": "100R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_RELAY1",
+        "2": "C_GATE1"
+      },
+      "xy": [
+        65,
+        6
+      ],
+      "sch": [
+        340,
+        230
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 100R",
+      "source": ""
+    },
+    {
+      "ref": "R4",
+      "value": "100k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_GATE1",
+        "2": "C_GND"
+      },
+      "xy": [
+        65,
+        10
+      ],
+      "sch": [
+        370,
+        230
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 100k",
+      "source": ""
+    },
+    {
+      "ref": "D1",
+      "value": "SS14",
+      "fp": "Diode_SMD:D_SMA",
+      "nets": {
+        "1": "C_5V",
+        "2": "C_COIL1"
+      },
+      "xy": [
+        62,
+        13
+      ],
+      "sch": [
+        350,
+        145
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "SS14",
+      "source": "https://www.vishay.com/docs/88746/ss12.pdf"
+    },
+    {
+      "ref": "K2",
+      "value": "G5Q-1A DC5",
+      "fp": "Relay_THT:Relay_SPST_Omron-G5Q-1A",
+      "nets": {
+        "1": "C_COIL2",
+        "5": "C_5V",
+        "2": "H_LOAD",
+        "3": "L_OUT2"
+      },
+      "xy": [
+        56,
+        16
+      ],
+      "sch": [
+        420,
+        100
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 180,
+      "mpn": "G5Q-1A DC5",
+      "source": "https://components.omron.com/sites/default/files/datasheet_pdf/J155-E1.pdf"
+    },
+    {
+      "ref": "Q2",
+      "value": "AO3400A",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "C_GATE2",
+        "2": "C_GND",
+        "3": "C_COIL2"
+      },
+      "xy": [
+        61,
+        20
+      ],
+      "sch": [
+        420,
+        185
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "AO3400A",
+      "source": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf"
+    },
+    {
+      "ref": "R2",
+      "value": "100R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_RELAY2",
+        "2": "C_GATE2"
+      },
+      "xy": [
+        65,
+        18
+      ],
+      "sch": [
+        410,
+        230
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 100R",
+      "source": ""
+    },
+    {
+      "ref": "R5",
+      "value": "100k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_GATE2",
+        "2": "C_GND"
+      },
+      "xy": [
+        65,
+        22
+      ],
+      "sch": [
+        440,
+        230
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 100k",
+      "source": ""
+    },
+    {
+      "ref": "D2",
+      "value": "SS14",
+      "fp": "Diode_SMD:D_SMA",
+      "nets": {
+        "1": "C_5V",
+        "2": "C_COIL2"
+      },
+      "xy": [
+        62,
+        25
+      ],
+      "sch": [
+        420,
+        145
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "SS14",
+      "source": "https://www.vishay.com/docs/88746/ss12.pdf"
+    },
+    {
+      "ref": "K3",
+      "value": "G5Q-1A DC5",
+      "fp": "Relay_THT:Relay_SPST_Omron-G5Q-1A",
+      "nets": {
+        "1": "C_COIL3",
+        "5": "C_5V",
+        "2": "H_LOAD",
+        "3": "L_OUT3"
+      },
+      "xy": [
+        56,
+        28
+      ],
+      "sch": [
+        490,
+        100
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 180,
+      "mpn": "G5Q-1A DC5",
+      "source": "https://components.omron.com/sites/default/files/datasheet_pdf/J155-E1.pdf"
+    },
+    {
+      "ref": "Q3",
+      "value": "AO3400A",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "C_GATE3",
+        "2": "C_GND",
+        "3": "C_COIL3"
+      },
+      "xy": [
+        62,
+        62
+      ],
+      "sch": [
+        490,
+        185
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "AO3400A",
+      "source": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf"
+    },
+    {
+      "ref": "R3",
+      "value": "100R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_RELAY3",
+        "2": "C_GATE3"
+      },
+      "xy": [
+        66,
+        58.5
+      ],
+      "sch": [
+        480,
+        230
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 1% 100R",
+      "source": ""
+    },
+    {
+      "ref": "R6",
+      "value": "100k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_GATE3",
+        "2": "C_GND"
+      },
+      "xy": [
+        66,
+        61
+      ],
+      "sch": [
+        510,
+        230
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 1% 100k",
+      "source": ""
+    },
+    {
+      "ref": "D3",
+      "value": "SS14",
+      "fp": "Diode_SMD:D_SMA",
+      "nets": {
+        "1": "C_5V",
+        "2": "C_COIL3"
+      },
+      "xy": [
+        62,
+        39
+      ],
+      "sch": [
+        490,
+        145
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "SS14",
+      "source": "https://www.vishay.com/docs/88746/ss12.pdf"
+    },
+    {
+      "ref": "U2",
+      "value": "MCP39F511A-E/MQ",
+      "fp": "Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "nets": {
+        "4": "H_RX",
+        "5": "H_COMMON",
+        "10": "H_RESET",
+        "11": "H_AVDD",
+        "12": "H_TX",
+        "13": "H_COMMON",
+        "16": "H_IP",
+        "17": "H_IM",
+        "18": "H_VM",
+        "19": "H_VP",
+        "20": "H_GND",
+        "21": "H_GND",
+        "23": "H_REF",
+        "24": "H_GND",
+        "25": "H_3V3",
+        "26": "H_MCLR",
+        "27": "H_GND",
+        "29": "H_GND"
+      },
+      "xy": [
+        27,
+        25
+      ],
+      "sch": [
+        685,
+        110
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "MCP39F511A-E/MQ",
+      "source": "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP39F511A-Data-Sheet-20006044A.pdf"
+    },
+    {
+      "ref": "U3",
+      "value": "ISOW7821DWER",
+      "fp": "Switch:ISOW7821_DWE",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_GND",
+        "3": "C_UART_TX",
+        "4": "C_UART_RX",
+        "7": "C_3V3",
+        "8": "C_GND",
+        "9": "H_GND",
+        "11": "H_GND",
+        "13": "H_TX",
+        "14": "H_RX",
+        "15": "H_GND",
+        "16": "H_3V3"
+      },
+      "xy": [
+        52,
+        48
+      ],
+      "sch": [
+        700,
+        230
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 180,
+      "mpn": "ISOW7821DWER",
+      "source": "https://www.ti.com/lit/ds/symlink/isow7821.pdf"
+    },
+    {
+      "ref": "R7",
+      "value": "2mR 4-terminal Kelvin",
+      "fp": "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.21mm",
+      "nets": {
+        "1": "H_GND",
+        "2": "H_KELVIN_IN",
+        "3": "H_KELVIN_OUT",
+        "4": "H_LOAD"
+      },
+      "xy": [
+        28,
+        13
+      ],
+      "sch": [
+        590,
+        120
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "WSK25122L000FEA",
+      "source": "https://www.vishay.com/docs/30108/wsk2512.pdf"
+    },
+    {
+      "ref": "R8",
+      "value": "1k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "H_KELVIN_OUT",
+        "2": "H_IP"
+      },
+      "xy": [
+        34,
+        24
+      ],
+      "sch": [
+        590,
+        305
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 1% 1k",
+      "source": ""
+    },
+    {
+      "ref": "R9",
+      "value": "1k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "H_KELVIN_IN",
+        "2": "H_IM"
+      },
+      "xy": [
+        32,
+        31
+      ],
+      "sch": [
+        645,
+        305
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 1% 1k",
+      "source": ""
+    },
+    {
+      "ref": "R10",
+      "value": "1k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "H_GND",
+        "2": "H_VM"
+      },
+      "xy": [
+        24,
+        34
+      ],
+      "sch": [
+        700,
+        305
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 1% 1k",
+      "source": ""
+    },
+    {
+      "ref": "R11",
+      "value": "249k",
+      "fp": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "N_IN",
+        "2": "H_DIV1"
+      },
+      "xy": [
+        6,
+        12
+      ],
+      "sch": [
+        755,
+        305
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "1206 1% 249k",
+      "source": ""
+    },
+    {
+      "ref": "R12",
+      "value": "249k",
+      "fp": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "H_DIV1",
+        "2": "H_DIV2"
+      },
+      "xy": [
+        6,
+        16
+      ],
+      "sch": [
+        590,
+        347
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "1206 1% 249k",
+      "source": ""
+    },
+    {
+      "ref": "R13",
+      "value": "249k",
+      "fp": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "H_DIV2",
+        "2": "H_DIV3"
+      },
+      "xy": [
+        6,
+        20
+      ],
+      "sch": [
+        645,
+        347
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "1206 1% 249k",
+      "source": ""
+    },
+    {
+      "ref": "R14",
+      "value": "249k",
+      "fp": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "H_DIV3",
+        "2": "H_VP"
+      },
+      "xy": [
+        6,
+        24
+      ],
+      "sch": [
+        700,
+        347
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "1206 1% 249k",
+      "source": ""
+    },
+    {
+      "ref": "R15",
+      "value": "1k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "H_VP",
+        "2": "H_GND"
+      },
+      "xy": [
+        18,
+        34
+      ],
+      "sch": [
+        755,
+        347
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 1% 1k",
+      "source": ""
+    },
+    {
+      "ref": "R16",
+      "value": "10R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "H_3V3",
+        "2": "H_AVDD"
+      },
+      "xy": [
+        20,
+        28
+      ],
+      "sch": [
+        590,
+        389
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 1% 10R",
+      "source": ""
+    },
+    {
+      "ref": "R17",
+      "value": "10k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "H_3V3",
+        "2": "H_RESET"
+      },
+      "xy": [
+        18,
+        19
+      ],
+      "sch": [
+        645,
+        389
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 1% 10k",
+      "source": ""
+    },
+    {
+      "ref": "R18",
+      "value": "10k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "H_3V3",
+        "2": "H_MCLR"
+      },
+      "xy": [
+        18,
+        16
+      ],
+      "sch": [
+        700,
+        389
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 1% 10k",
+      "source": ""
+    },
+    {
+      "ref": "C1",
+      "value": "33n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_IP",
+        "2": "H_GND"
+      },
+      "xy": [
+        34,
+        21.5
+      ],
+      "sch": [
+        580,
+        435
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 33n",
+      "source": ""
+    },
+    {
+      "ref": "C2",
+      "value": "33n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_IM",
+        "2": "H_GND"
+      },
+      "xy": [
+        36,
+        32.5
+      ],
+      "sch": [
+        625,
+        435
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 33n",
+      "source": ""
+    },
+    {
+      "ref": "C3",
+      "value": "33n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_VM",
+        "2": "H_GND"
+      },
+      "xy": [
+        27,
+        32
+      ],
+      "sch": [
+        670,
+        435
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 33n",
+      "source": ""
+    },
+    {
+      "ref": "C4",
+      "value": "33n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_VP",
+        "2": "H_GND"
+      },
+      "xy": [
+        15,
+        31.5
+      ],
+      "sch": [
+        715,
+        435
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 33n",
+      "source": ""
+    },
+    {
+      "ref": "C5",
+      "value": "1u",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_AVDD",
+        "2": "H_GND"
+      },
+      "xy": [
+        20,
+        30
+      ],
+      "sch": [
+        760,
+        435
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 1u",
+      "source": ""
+    },
+    {
+      "ref": "C6",
+      "value": "100n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_AVDD",
+        "2": "H_GND"
+      },
+      "xy": [
+        24,
+        32
+      ],
+      "sch": [
+        580,
+        475
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 100n",
+      "source": ""
+    },
+    {
+      "ref": "C7",
+      "value": "100n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_3V3",
+        "2": "H_GND"
+      },
+      "xy": [
+        31,
+        18
+      ],
+      "sch": [
+        625,
+        475
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 100n",
+      "source": ""
+    },
+    {
+      "ref": "C8",
+      "value": "100n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_REF",
+        "2": "H_GND"
+      },
+      "xy": [
+        34,
+        19
+      ],
+      "sch": [
+        670,
+        475
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 100n",
+      "source": ""
+    },
+    {
+      "ref": "C9",
+      "value": "100n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_RESET",
+        "2": "H_GND"
+      },
+      "xy": [
+        22,
+        19
+      ],
+      "sch": [
+        715,
+        475
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 100n",
+      "source": ""
+    },
+    {
+      "ref": "C10",
+      "value": "100n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_MCLR",
+        "2": "H_GND"
+      },
+      "xy": [
+        28,
+        18
+      ],
+      "sch": [
+        760,
+        475
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 100n",
+      "source": ""
+    },
+    {
+      "ref": "C11",
+      "value": "10u",
+      "fp": "Capacitor_SMD:C_0805_2012Metric",
+      "nets": {
+        "1": "H_3V3",
+        "2": "H_GND"
+      },
+      "xy": [
+        43,
+        43
+      ],
+      "sch": [
+        580,
+        515
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0805 X7R 16V 10u",
+      "source": ""
+    },
+    {
+      "ref": "C12",
+      "value": "100n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "H_3V3",
+        "2": "H_GND"
+      },
+      "xy": [
+        43,
+        46
+      ],
+      "sch": [
+        625,
+        515
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 100n",
+      "source": ""
+    },
+    {
+      "ref": "C13",
+      "value": "10u",
+      "fp": "Capacitor_SMD:C_0805_2012Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_GND"
+      },
+      "xy": [
+        61,
+        46
+      ],
+      "sch": [
+        670,
+        515
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0805 X7R 16V 10u",
+      "source": ""
+    },
+    {
+      "ref": "C14",
+      "value": "100n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_GND"
+      },
+      "xy": [
+        61,
+        42
+      ],
+      "sch": [
+        715,
+        515
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 100n",
+      "source": ""
+    },
+    {
+      "ref": "C15",
+      "value": "220u 6.3V",
+      "fp": "Capacitor_SMD:CP_Elec_6.3x5.8",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_GND"
+      },
+      "xy": [
+        57.5,
+        60
+      ],
+      "sch": [
+        460,
+        310
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "Panasonic EEE-FT0J221AR",
+      "source": ""
+    },
+    {
+      "ref": "C16",
+      "value": "100u 10V",
+      "fp": "Capacitor_SMD:CP_Elec_6.3x5.8",
+      "nets": {
+        "1": "C_5V",
+        "2": "C_GND"
+      },
+      "xy": [
+        32,
+        59
+      ],
+      "sch": [
+        125,
+        250
+      ],
+      "board": "power",
+      "side": "B",
+      "angle": 0,
+      "mpn": "Panasonic EEE-FT1A101AR",
+      "source": ""
+    },
+    {
+      "ref": "J2",
+      "value": "COLD LINK / JST-PH8",
+      "fp": "Connector_JST:JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical",
+      "nets": {
+        "1": "C_5V",
+        "2": "C_GND",
+        "3": "C_3V3",
+        "4": "C_RELAY1",
+        "5": "C_RELAY2",
+        "6": "C_RELAY3",
+        "7": "C_UART_TX",
+        "8": "C_UART_RX"
+      },
+      "xy": [
+        64,
+        57
+      ],
+      "sch": [
+        445,
+        385
+      ],
+      "board": "power",
+      "side": "F",
+      "angle": 90,
+      "mpn": "COLD LINK / JST-PH8",
+      "source": "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+    },
+    {
+      "ref": "J3",
+      "value": "COLD LINK / JST-PH8",
+      "fp": "Connector_JST:JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical",
+      "nets": {
+        "1": "C_5V",
+        "2": "C_GND",
+        "3": "C_3V3",
+        "4": "C_RELAY1",
+        "5": "C_RELAY2",
+        "6": "C_RELAY3",
+        "7": "C_UART_TX",
+        "8": "C_UART_RX"
+      },
+      "xy": [
+        60,
+        61
+      ],
+      "sch": [
+        470,
+        285
+      ],
+      "board": "control",
+      "side": "B",
+      "angle": 0,
+      "mpn": "COLD LINK / JST-PH8",
+      "source": "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+    },
+    {
+      "ref": "U1",
+      "value": "ESP32-C3-MINI-1-N4X",
+      "fp": "Switch:ESP32_C3_MINI_1",
+      "nets": {
+        "3": "C_3V3",
+        "5": "C_STRAP2",
+        "6": "C_RELAY3",
+        "8": "C_EN",
+        "12": "C_RELAY1",
+        "13": "C_RELAY2",
+        "16": "C_UART_TX",
+        "18": "C_KEY1",
+        "19": "C_KEY2",
+        "20": "C_KEY3",
+        "21": "C_UART_RX",
+        "22": "C_STRAP8",
+        "23": "C_BOOT",
+        "26": "C_USB_N",
+        "27": "C_USB_P",
+        "30": "C_U0RX",
+        "31": "C_U0TX",
+        "1": "C_GND",
+        "2": "C_GND",
+        "11": "C_GND",
+        "14": "C_GND",
+        "36": "C_GND",
+        "37": "C_GND",
+        "38": "C_GND",
+        "39": "C_GND",
+        "40": "C_GND",
+        "41": "C_GND",
+        "42": "C_GND",
+        "43": "C_GND",
+        "44": "C_GND",
+        "45": "C_GND",
+        "46": "C_GND",
+        "47": "C_GND",
+        "48": "C_GND",
+        "49": "C_GND",
+        "50": "C_GND",
+        "51": "C_GND",
+        "52": "C_GND",
+        "53": "C_GND"
+      },
+      "xy": [
+        38,
+        6.5
+      ],
+      "sch": [
+        130,
+        145
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "ESP32-C3-MINI-1-N4X",
+      "source": "https://documentation.espressif.com/esp32-c3-mini-1_datasheet_en.pdf"
+    },
+    {
+      "ref": "R30",
+      "value": "10k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_EN"
+      },
+      "xy": [
+        28,
+        10
+      ],
+      "sch": [
+        65,
+        275
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 10k",
+      "source": ""
+    },
+    {
+      "ref": "R31",
+      "value": "10k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_STRAP2"
+      },
+      "xy": [
+        28,
+        13
+      ],
+      "sch": [
+        113,
+        275
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 10k",
+      "source": ""
+    },
+    {
+      "ref": "R32",
+      "value": "10k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_STRAP8"
+      },
+      "xy": [
+        45,
+        17
+      ],
+      "sch": [
+        161,
+        275
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 10k",
+      "source": ""
+    },
+    {
+      "ref": "R33",
+      "value": "10k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_BOOT"
+      },
+      "xy": [
+        48,
+        17
+      ],
+      "sch": [
+        209,
+        275
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 10k",
+      "source": ""
+    },
+    {
+      "ref": "C30",
+      "value": "1u",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "C_EN",
+        "2": "C_GND"
+      },
+      "xy": [
+        25,
+        10
+      ],
+      "sch": [
+        70,
+        320
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 1u",
+      "source": ""
+    },
+    {
+      "ref": "C31",
+      "value": "10u",
+      "fp": "Capacitor_SMD:C_0805_2012Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_GND"
+      },
+      "xy": [
+        28,
+        6
+      ],
+      "sch": [
+        125,
+        320
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0805 X7R 16V 10u",
+      "source": ""
+    },
+    {
+      "ref": "C32",
+      "value": "100n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_GND"
+      },
+      "xy": [
+        24,
+        5
+      ],
+      "sch": [
+        180,
+        320
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 100n",
+      "source": ""
+    },
+    {
+      "ref": "U4",
+      "value": "TLV1117LV33DCYR",
+      "fp": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+      "nets": {
+        "1": "C_GND",
+        "2": "C_3V3",
+        "3": "C_5V"
+      },
+      "xy": [
+        40,
+        54
+      ],
+      "sch": [
+        430,
+        115
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "TLV1117LV33DCYR",
+      "source": "https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf"
+    },
+    {
+      "ref": "C33",
+      "value": "22u",
+      "fp": "Capacitor_SMD:C_1206_3216Metric",
+      "nets": {
+        "1": "C_5V",
+        "2": "C_GND"
+      },
+      "xy": [
+        31,
+        54
+      ],
+      "sch": [
+        370,
+        185
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "1206 X7R 16V 22u",
+      "source": ""
+    },
+    {
+      "ref": "C34",
+      "value": "22u",
+      "fp": "Capacitor_SMD:C_1206_3216Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_GND"
+      },
+      "xy": [
+        48,
+        50
+      ],
+      "sch": [
+        420,
+        185
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "1206 X7R 16V 22u",
+      "source": ""
+    },
+    {
+      "ref": "C35",
+      "value": "100n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_GND"
+      },
+      "xy": [
+        48,
+        54
+      ],
+      "sch": [
+        470,
+        185
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 100n",
+      "source": ""
+    },
+    {
+      "ref": "TP1",
+      "value": "C_GND",
+      "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "C_GND"
+      },
+      "xy": [
+        20,
+        66
+      ],
+      "sch": [
+        325,
+        350
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Factory pogo pad",
+      "source": ""
+    },
+    {
+      "ref": "TP2",
+      "value": "C_3V3",
+      "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "C_3V3"
+      },
+      "xy": [
+        23,
+        66
+      ],
+      "sch": [
+        378,
+        350
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Factory pogo pad",
+      "source": ""
+    },
+    {
+      "ref": "TP3",
+      "value": "C_EN",
+      "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "C_EN"
+      },
+      "xy": [
+        26,
+        66
+      ],
+      "sch": [
+        431,
+        350
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Factory pogo pad",
+      "source": ""
+    },
+    {
+      "ref": "TP4",
+      "value": "C_BOOT",
+      "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "C_BOOT"
+      },
+      "xy": [
+        29,
+        66
+      ],
+      "sch": [
+        484,
+        350
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Factory pogo pad",
+      "source": ""
+    },
+    {
+      "ref": "TP5",
+      "value": "C_U0RX",
+      "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "C_U0RX"
+      },
+      "xy": [
+        32,
+        66
+      ],
+      "sch": [
+        325,
+        395
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Factory pogo pad",
+      "source": ""
+    },
+    {
+      "ref": "TP6",
+      "value": "C_U0TX",
+      "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "C_U0TX"
+      },
+      "xy": [
+        35,
+        66
+      ],
+      "sch": [
+        378,
+        395
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Factory pogo pad",
+      "source": ""
+    },
+    {
+      "ref": "TP7",
+      "value": "C_USB_N",
+      "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "C_USB_N"
+      },
+      "xy": [
+        38,
+        66
+      ],
+      "sch": [
+        431,
+        395
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Factory pogo pad",
+      "source": ""
+    },
+    {
+      "ref": "TP8",
+      "value": "C_USB_P",
+      "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "C_USB_P"
+      },
+      "xy": [
+        41,
+        66
+      ],
+      "sch": [
+        484,
+        395
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "Factory pogo pad",
+      "source": ""
+    },
+    {
+      "ref": "SW1",
+      "value": "B3U-1000P",
+      "fp": "Button_Switch_SMD:SW_SPST_B3U-1000P",
+      "nets": {
+        "1": "C_KEY1",
+        "2": "C_GND"
+      },
+      "xy": [
+        16,
+        38
+      ],
+      "sch": [
+        590,
+        105
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "B3U-1000P",
+      "source": "https://components.omron.com/us-en/system/files/2023-01/datasheet_pdf/A162-E1.pdf"
+    },
+    {
+      "ref": "R34",
+      "value": "10k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_KEY1"
+      },
+      "xy": [
+        16,
+        33
+      ],
+      "sch": [
+        590,
+        170
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 10k",
+      "source": ""
+    },
+    {
+      "ref": "C36",
+      "value": "10n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "C_KEY1",
+        "2": "C_GND"
+      },
+      "xy": [
+        20,
+        36
+      ],
+      "sch": [
+        590,
+        230
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 10n",
+      "source": ""
+    },
+    {
+      "ref": "SW2",
+      "value": "B3U-1000P",
+      "fp": "Button_Switch_SMD:SW_SPST_B3U-1000P",
+      "nets": {
+        "1": "C_KEY2",
+        "2": "C_GND"
+      },
+      "xy": [
+        38,
+        38
+      ],
+      "sch": [
+        673,
+        105
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "B3U-1000P",
+      "source": "https://components.omron.com/us-en/system/files/2023-01/datasheet_pdf/A162-E1.pdf"
+    },
+    {
+      "ref": "R35",
+      "value": "10k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_KEY2"
+      },
+      "xy": [
+        38,
+        33
+      ],
+      "sch": [
+        673,
+        170
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 10k",
+      "source": ""
+    },
+    {
+      "ref": "C37",
+      "value": "10n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "C_KEY2",
+        "2": "C_GND"
+      },
+      "xy": [
+        42,
+        36
+      ],
+      "sch": [
+        673,
+        230
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 10n",
+      "source": ""
+    },
+    {
+      "ref": "SW3",
+      "value": "B3U-1000P",
+      "fp": "Button_Switch_SMD:SW_SPST_B3U-1000P",
+      "nets": {
+        "1": "C_KEY3",
+        "2": "C_GND"
+      },
+      "xy": [
+        60,
+        38
+      ],
+      "sch": [
+        756,
+        105
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "B3U-1000P",
+      "source": "https://components.omron.com/us-en/system/files/2023-01/datasheet_pdf/A162-E1.pdf"
+    },
+    {
+      "ref": "R36",
+      "value": "10k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "C_3V3",
+        "2": "C_KEY3"
+      },
+      "xy": [
+        60,
+        33
+      ],
+      "sch": [
+        756,
+        170
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 1% 10k",
+      "source": ""
+    },
+    {
+      "ref": "C38",
+      "value": "10n",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "C_KEY3",
+        "2": "C_GND"
+      },
+      "xy": [
+        57,
+        35
+      ],
+      "sch": [
+        756,
+        230
+      ],
+      "board": "control",
+      "side": "F",
+      "angle": 0,
+      "mpn": "0603 X7R 16V 10n",
+      "source": ""
+    }
+  ]
+}

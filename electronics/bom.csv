@@ -1,0 +1,81 @@
+Reference,Board,Value,Manufacturer part / specification,Footprint,Primary source,Side
+J1,power,L N L1 L2 L3,"Phoenix Contact MKDS 1,5/5-5,08","TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-5-5.08_1x05_P5.08mm_Horizontal",https://www.phoenixcontact.com/en-us/products/pcb-terminal-block-mkds-15-5-508-1715750,F
+F1,power,T2A 277VAC / 1500A BC,SCHURTER 3403.0277.23,Switch:UMT_H,https://www.schurter.com/en/datasheet/typ_UMT-H.pdf,F
+PS1,power,RAC05-05SK/277,RAC05-05SK/277,Switch:RAC05_05SK_277,https://recom-power.com/pdf/Powerline_AC-DC/RAC05-K_277.pdf,F
+RV1,power,TMOV14RP275E,Littelfuse TMOV14RP275E (thermal protected),Switch:TMOV14,https://www.littelfuse.com/products/overvoltage-protection/varistors/thermally-protected/tmov,F
+K1,power,G5Q-1A DC5,G5Q-1A DC5,Relay_THT:Relay_SPST_Omron-G5Q-1A,https://components.omron.com/sites/default/files/datasheet_pdf/J155-E1.pdf,F
+Q1,power,AO3400A,AO3400A,Package_TO_SOT_SMD:SOT-23,https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf,F
+R1,power,100R,0603 1% 100R,Resistor_SMD:R_0603_1608Metric,,F
+R4,power,100k,0603 1% 100k,Resistor_SMD:R_0603_1608Metric,,F
+D1,power,SS14,SS14,Diode_SMD:D_SMA,https://www.vishay.com/docs/88746/ss12.pdf,B
+K2,power,G5Q-1A DC5,G5Q-1A DC5,Relay_THT:Relay_SPST_Omron-G5Q-1A,https://components.omron.com/sites/default/files/datasheet_pdf/J155-E1.pdf,F
+Q2,power,AO3400A,AO3400A,Package_TO_SOT_SMD:SOT-23,https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf,F
+R2,power,100R,0603 1% 100R,Resistor_SMD:R_0603_1608Metric,,F
+R5,power,100k,0603 1% 100k,Resistor_SMD:R_0603_1608Metric,,F
+D2,power,SS14,SS14,Diode_SMD:D_SMA,https://www.vishay.com/docs/88746/ss12.pdf,B
+K3,power,G5Q-1A DC5,G5Q-1A DC5,Relay_THT:Relay_SPST_Omron-G5Q-1A,https://components.omron.com/sites/default/files/datasheet_pdf/J155-E1.pdf,F
+Q3,power,AO3400A,AO3400A,Package_TO_SOT_SMD:SOT-23,https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf,F
+R3,power,100R,0603 1% 100R,Resistor_SMD:R_0603_1608Metric,,B
+R6,power,100k,0603 1% 100k,Resistor_SMD:R_0603_1608Metric,,B
+D3,power,SS14,SS14,Diode_SMD:D_SMA,https://www.vishay.com/docs/88746/ss12.pdf,B
+U2,power,MCP39F511A-E/MQ,MCP39F511A-E/MQ,Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm,https://ww1.microchip.com/downloads/en/DeviceDoc/MCP39F511A-Data-Sheet-20006044A.pdf,B
+U3,power,ISOW7821DWER,ISOW7821DWER,Switch:ISOW7821_DWE,https://www.ti.com/lit/ds/symlink/isow7821.pdf,F
+R7,power,2mR 4-terminal Kelvin,WSK25122L000FEA,Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.21mm,https://www.vishay.com/docs/30108/wsk2512.pdf,B
+R8,power,1k,0603 1% 1k,Resistor_SMD:R_0603_1608Metric,,B
+R9,power,1k,0603 1% 1k,Resistor_SMD:R_0603_1608Metric,,B
+R10,power,1k,0603 1% 1k,Resistor_SMD:R_0603_1608Metric,,B
+R11,power,249k,1206 1% 249k,Resistor_SMD:R_1206_3216Metric,,B
+R12,power,249k,1206 1% 249k,Resistor_SMD:R_1206_3216Metric,,B
+R13,power,249k,1206 1% 249k,Resistor_SMD:R_1206_3216Metric,,B
+R14,power,249k,1206 1% 249k,Resistor_SMD:R_1206_3216Metric,,B
+R15,power,1k,0603 1% 1k,Resistor_SMD:R_0603_1608Metric,,B
+R16,power,10R,0603 1% 10R,Resistor_SMD:R_0603_1608Metric,,B
+R17,power,10k,0603 1% 10k,Resistor_SMD:R_0603_1608Metric,,B
+R18,power,10k,0603 1% 10k,Resistor_SMD:R_0603_1608Metric,,B
+C1,power,33n,0603 X7R 16V 33n,Capacitor_SMD:C_0603_1608Metric,,B
+C2,power,33n,0603 X7R 16V 33n,Capacitor_SMD:C_0603_1608Metric,,B
+C3,power,33n,0603 X7R 16V 33n,Capacitor_SMD:C_0603_1608Metric,,B
+C4,power,33n,0603 X7R 16V 33n,Capacitor_SMD:C_0603_1608Metric,,B
+C5,power,1u,0603 X7R 16V 1u,Capacitor_SMD:C_0603_1608Metric,,B
+C6,power,100n,0603 X7R 16V 100n,Capacitor_SMD:C_0603_1608Metric,,B
+C7,power,100n,0603 X7R 16V 100n,Capacitor_SMD:C_0603_1608Metric,,B
+C8,power,100n,0603 X7R 16V 100n,Capacitor_SMD:C_0603_1608Metric,,B
+C9,power,100n,0603 X7R 16V 100n,Capacitor_SMD:C_0603_1608Metric,,B
+C10,power,100n,0603 X7R 16V 100n,Capacitor_SMD:C_0603_1608Metric,,B
+C11,power,10u,0805 X7R 16V 10u,Capacitor_SMD:C_0805_2012Metric,,F
+C12,power,100n,0603 X7R 16V 100n,Capacitor_SMD:C_0603_1608Metric,,F
+C13,power,10u,0805 X7R 16V 10u,Capacitor_SMD:C_0805_2012Metric,,B
+C14,power,100n,0603 X7R 16V 100n,Capacitor_SMD:C_0603_1608Metric,,B
+C15,power,220u 6.3V,Panasonic EEE-FT0J221AR,Capacitor_SMD:CP_Elec_6.3x5.8,,B
+C16,power,100u 10V,Panasonic EEE-FT1A101AR,Capacitor_SMD:CP_Elec_6.3x5.8,,B
+J2,power,COLD LINK / JST-PH8,COLD LINK / JST-PH8,Connector_JST:JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical,https://www.jst-mfg.com/product/pdf/eng/ePH.pdf,F
+J3,control,COLD LINK / JST-PH8,COLD LINK / JST-PH8,Connector_JST:JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical,https://www.jst-mfg.com/product/pdf/eng/ePH.pdf,B
+U1,control,ESP32-C3-MINI-1-N4X,ESP32-C3-MINI-1-N4X,Switch:ESP32_C3_MINI_1,https://documentation.espressif.com/esp32-c3-mini-1_datasheet_en.pdf,F
+R30,control,10k,0603 1% 10k,Resistor_SMD:R_0603_1608Metric,,F
+R31,control,10k,0603 1% 10k,Resistor_SMD:R_0603_1608Metric,,F
+R32,control,10k,0603 1% 10k,Resistor_SMD:R_0603_1608Metric,,F
+R33,control,10k,0603 1% 10k,Resistor_SMD:R_0603_1608Metric,,F
+C30,control,1u,0603 X7R 16V 1u,Capacitor_SMD:C_0603_1608Metric,,F
+C31,control,10u,0805 X7R 16V 10u,Capacitor_SMD:C_0805_2012Metric,,F
+C32,control,100n,0603 X7R 16V 100n,Capacitor_SMD:C_0603_1608Metric,,F
+U4,control,TLV1117LV33DCYR,TLV1117LV33DCYR,Package_TO_SOT_SMD:SOT-223-3_TabPin2,https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf,F
+C33,control,22u,1206 X7R 16V 22u,Capacitor_SMD:C_1206_3216Metric,,F
+C34,control,22u,1206 X7R 16V 22u,Capacitor_SMD:C_1206_3216Metric,,F
+C35,control,100n,0603 X7R 16V 100n,Capacitor_SMD:C_0603_1608Metric,,F
+TP1,control,C_GND,Factory pogo pad,TestPoint:TestPoint_Pad_D1.5mm,,F
+TP2,control,C_3V3,Factory pogo pad,TestPoint:TestPoint_Pad_D1.5mm,,F
+TP3,control,C_EN,Factory pogo pad,TestPoint:TestPoint_Pad_D1.5mm,,F
+TP4,control,C_BOOT,Factory pogo pad,TestPoint:TestPoint_Pad_D1.5mm,,F
+TP5,control,C_U0RX,Factory pogo pad,TestPoint:TestPoint_Pad_D1.5mm,,F
+TP6,control,C_U0TX,Factory pogo pad,TestPoint:TestPoint_Pad_D1.5mm,,F
+TP7,control,C_USB_N,Factory pogo pad,TestPoint:TestPoint_Pad_D1.5mm,,F
+TP8,control,C_USB_P,Factory pogo pad,TestPoint:TestPoint_Pad_D1.5mm,,F
+SW1,control,B3U-1000P,B3U-1000P,Button_Switch_SMD:SW_SPST_B3U-1000P,https://components.omron.com/us-en/system/files/2023-01/datasheet_pdf/A162-E1.pdf,F
+R34,control,10k,0603 1% 10k,Resistor_SMD:R_0603_1608Metric,,F
+C36,control,10n,0603 X7R 16V 10n,Capacitor_SMD:C_0603_1608Metric,,F
+SW2,control,B3U-1000P,B3U-1000P,Button_Switch_SMD:SW_SPST_B3U-1000P,https://components.omron.com/us-en/system/files/2023-01/datasheet_pdf/A162-E1.pdf,F
+R35,control,10k,0603 1% 10k,Resistor_SMD:R_0603_1608Metric,,F
+C37,control,10n,0603 X7R 16V 10n,Capacitor_SMD:C_0603_1608Metric,,F
+SW3,control,B3U-1000P,B3U-1000P,Button_Switch_SMD:SW_SPST_B3U-1000P,https://components.omron.com/us-en/system/files/2023-01/datasheet_pdf/A162-E1.pdf,F
+R36,control,10k,0603 1% 10k,Resistor_SMD:R_0603_1608Metric,,F
+C38,control,10n,0603 X7R 16V 10n,Capacitor_SMD:C_0603_1608Metric,,F

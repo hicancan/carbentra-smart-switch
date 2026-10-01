@@ -1,0 +1,19 @@
+# Portable code checkouts; exact-byte design inputs and evidence stay unchanged.
+* text=auto eol=lf
+*.kicad_* -text
+*.json -text
+firmware/licenses/** -text
+LICENSE* -text
+*.blend binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.glb binary
+*.stl binary
+*.mp4 binary
+*.zip binary
+*.elf binary
+*.bin binary
+*.svg -whitespace
+*.csv text eol=lf

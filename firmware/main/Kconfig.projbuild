@@ -1,0 +1,8 @@
+menu "CARBENTRA physical qualification"
+config CARBENTRA_SWITCH_ALLOW_ACTUATION
+    bool "Permit qualified and individually commissioned relay energizing"
+    default n
+    help
+        Keep disabled for prototype and software validation builds. Enabling this
+        is not qualification. Each unit also needs deliberate factory commissioning.
+endmenu

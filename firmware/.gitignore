@@ -1,0 +1,17 @@
+/build/
+/sdkconfig
+/sdkconfig.old
+*.bin
+*.elf
+*.map
+/factory-private/
+/managed_components/
+*.pem
+*.key
+*.crt
+/factory*.csv
+/unit*.csv
+# Reproducible reviewed development profile and disabled-actuation release evidence.
+!/sdkconfig
+!/build-current.log
+!/artifacts/*.bin

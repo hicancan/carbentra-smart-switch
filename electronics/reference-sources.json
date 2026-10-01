@@ -1,0 +1,109 @@
+{
+  "primary_urls": [
+    "https://components.omron.com/sites/default/files/datasheet_pdf/J155-E1.pdf",
+    "https://components.omron.com/us-en/system/files/2023-01/datasheet_pdf/A162-E1.pdf",
+    "https://documentation.espressif.com/esp32-c3-mini-1_datasheet_en.pdf",
+    "https://recom-power.com/pdf/Powerline_AC-DC/RAC05-K_277.pdf",
+    "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/UserGuides/MCP39F511A-Demo-Board-User-Guide-50002770A.pdf",
+    "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP39F511A-Data-Sheet-20006044A.pdf",
+    "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf",
+    "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf",
+    "https://www.littelfuse.com/assetdocs/varistors-tmov-datasheet?assetguid=bd475732-1071-4352-b8aa-f78b0007eb05",
+    "https://www.littelfuse.com/products/overvoltage-protection/varistors/thermally-protected/tmov",
+    "https://www.phoenixcontact.com/en-us/products/pcb-terminal-block-mkds-15-5-508-1715750",
+    "https://www.schurter.com/en/datasheet/typ_UMT-H.pdf",
+    "https://www.ti.com/lit/ds/symlink/isow7821.pdf",
+    "https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf",
+    "https://www.ti.com/lit/ml/slup419/slup419.pdf",
+    "https://www.vishay.com/docs/30108/wsk2512.pdf",
+    "https://www.vishay.com/docs/88746/ss12.pdf"
+  ],
+  "status": "Reference documents are linked, not redistributed",
+  "documents": [
+    {
+      "bytes": 1056106,
+      "original_name": "esp32.pdf",
+      "sha256": "de7361381348d82a1abd337f10170be7a420675987568f71fe3c5b100deed270"
+    },
+    {
+      "bytes": 214216,
+      "original_name": "esp32.txt",
+      "sha256": "524991c371404d314b014d608a70f695f01eca0f5598aa0504fe5b78099253ff"
+    },
+    {
+      "bytes": 461066,
+      "original_name": "fuse.pdf",
+      "sha256": "bac65726cd086e794288aa169ef2349664e674520019839b234b3a90f7c06ec7"
+    },
+    {
+      "bytes": 24418,
+      "original_name": "fuse.txt",
+      "sha256": "0dede025c00c396ded42e8551165428054e5d434f522f343de38e6de44b6aaab"
+    },
+    {
+      "bytes": 1353130,
+      "original_name": "isolator.pdf",
+      "sha256": "9032986e4442db6ece997d0bd2c544c3d3c0251d75736806a29e895814a56378"
+    },
+    {
+      "bytes": 177839,
+      "original_name": "isolator.txt",
+      "sha256": "74763505fe46b5f18599362be36f64eaaa4c04aa6159ae025344da9f3c43dfeb"
+    },
+    {
+      "bytes": 500358,
+      "original_name": "meter-demo.pdf",
+      "sha256": "d4fc6bdb3f3d28e4f81752d7c260a059c7e26ff97f560b25374e2f7842f04d5f"
+    },
+    {
+      "bytes": 116868,
+      "original_name": "meter-demo.txt",
+      "sha256": "b4d94d16bd0eb8cf3a020e594d8415796432e6bf01d20b5406381e9f9ec4478d"
+    },
+    {
+      "bytes": 1020669,
+      "original_name": "meter.pdf",
+      "sha256": "ffa42d2cb7cceac64019d48dfabf33a1ce141992ad54ac96a28d92067791bf08"
+    },
+    {
+      "bytes": 232690,
+      "original_name": "meter.txt",
+      "sha256": "834f24bae04f65cc52c4b04258f1ca41ebc8e023f11ff06aaa003c3dc188c97e"
+    },
+    {
+      "bytes": 644022,
+      "original_name": "mov.pdf",
+      "sha256": "f1ef14051368a0f13a148ebea3f0cc740e25d725bfba621b5a8d94258772a5c9"
+    },
+    {
+      "bytes": 91420,
+      "original_name": "mov.txt",
+      "sha256": "f5c94d0f98db3e6e157f5dd34330e203c8c75009f22a9b6f7ae5d8181caaae45"
+    },
+    {
+      "bytes": 3416427,
+      "original_name": "psu-selected.pdf",
+      "sha256": "069815a510302a726baae55fdf16dbed09b36f99d2771a1b8fb49a44e77264d2"
+    },
+    {
+      "bytes": 1140423,
+      "original_name": "psu.pdf",
+      "sha256": "721ab83fc5e011de84d10355c8c52b92b7a69be589e9bf8284a77453320da364"
+    },
+    {
+      "bytes": 41513,
+      "original_name": "psu.txt",
+      "sha256": "3f4f04e5432d8d2697acb8e2f0c9553ef6689881d9c4a71e5c9ecc918a563629"
+    },
+    {
+      "bytes": 113461,
+      "original_name": "shunt.pdf",
+      "sha256": "2ee8a9067539bd2cabb08845219bac55d506b1ca892a2dbaeed343dd1ed10cff"
+    },
+    {
+      "bytes": 21516,
+      "original_name": "shunt.txt",
+      "sha256": "d0f5daa597a9e0f1acac747ca6f80d7a57ea041b30ac5fe1bb9f6eb08ac9b352"
+    }
+  ]
+}

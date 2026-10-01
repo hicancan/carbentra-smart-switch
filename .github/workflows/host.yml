@@ -1,0 +1,45 @@
+name: Windows host regression
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  host:
+    runs-on: windows-2022
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v5
+      - name: Set up pinned uv and Python
+        uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          version: '0.11.17'
+          python-version: '3.12'
+          enable-cache: true
+      - name: Create environment before installing dependencies
+        run: |
+          uv venv --python 3.12
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          uv sync --frozen
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Fetch only the SDK-pinned cJSON source
+        run: |
+          $dependency = Join-Path $env:RUNNER_TEMP 'carbentra-cjson'
+          $pin = (Get-Content firmware/dependencies.lock.json -Raw | ConvertFrom-Json).sdk_submodules.cJSON
+          git init $dependency
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          git -C $dependency remote add origin https://github.com/DaveGamble/cJSON.git
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          git -C $dependency fetch --depth 1 origin $pin
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          git -C $dependency checkout --detach FETCH_HEAD
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          "CJSON_ROOT=$dependency" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+      - name: Run actual MSVC control, meter and protocol tests
+        run: ./scripts/dev.ps1 -Action host -BuildRoot "$env:RUNNER_TEMP/carbentra-host"

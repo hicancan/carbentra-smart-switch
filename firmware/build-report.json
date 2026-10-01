@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "validation_date": "2026-10-01",
+  "status": "WINDOWS_NATIVE_HOST_AND_REAL_TARGET_PASS_HARDWARE_UNTESTED",
+  "host_tests": {
+    "ctest_passed": 1,
+    "malformed_json_cases": 2000,
+    "groups": [
+      "commissioning and actuation guards",
+      "channel-local manual hold",
+      "maintenance/protected/fault",
+      "debounced offline keys",
+      "replay and idempotency",
+      "meter frames and energy persistence",
+      "strict uint64 JSON"
+    ],
+    "compiler": "MSVC 19.44.35228.0 x64 C11",
+    "strict_warnings": true,
+    "assertions_enabled": true,
+    "current_sanitizer_run": false,
+    "SDK_free_host_path_passed": true
+  },
+  "target_build": {
+    "board": "ESP32-C3",
+    "sdk": "ESP-IDF 5.4.3",
+    "sdk_commit": "ea1c174c1cbb7348bd8ba0ff1eb306246938dd80",
+    "application_partition_bytes": 2621440,
+    "image_bytes": 1121504,
+    "actuation_enabled": false
+  },
+  "artifacts_in_release": {
+    "carbentra_smart_switch.bin": {
+      "bytes": 1121504,
+      "sha256": "2073b39a0465d4c6fad1fb510e2f5909ce603b672b59094df28c421d49444725"
+    },
+    "bootloader/bootloader.bin": {
+      "bytes": 20832,
+      "sha256": "5522d9d89708842ebb05bc438ee10c0d54651c96fc41e8ef8a6feb5f27cde436"
+    },
+    "partition_table/partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "7d1ecdcd22ccc7bd7b9aaa669247714f68dabb71982c16eadc8eb55cb6950174"
+    }
+  },
+  "source_sha256": {
+    "firmware/host/CMakeLists.txt": "ded5fd515e28625e360c2924c32fe1bf45823754878eb57af05402970dd8114d",
+    "firmware/.gitignore": "546f7860bff469a555483f4efc1d47904220d60ce9c932fd20a8a664271dd2b8",
+    "firmware/CMakeLists.txt": "64b607b574c726a7b043036dde1cec2121e74f11b08a34974dfe981d13f79eb6",
+    "firmware/core/meter.c": "fbb6eea1e954fe3cefcd3b02fd6841d792a215f2606461b775469ab00c96826b",
+    "firmware/core/meter.h": "3cea38ecc2c7ad83d7f222e6c6f0b48a79a371f2d62611745f64ebd9534e67de",
+    "firmware/core/switch_core.c": "2e804ab363d55fb6ececd78e3ab713485e4b15c0a4acbd093befefd76b192d4d",
+    "firmware/core/switch_core.h": "7be0725f6417e835560ed786cce40c19ec3fed93ebeb58be6cde939d93f266e1",
+    "firmware/dependencies.lock.json": "416f9a8af682c9afa377a0f194fe12845d622b7a79b3826510c6ad87c0515e62",
+    "firmware/main/CMakeLists.txt": "c237799fa0021fc7f234c85bb71d81804fa160996b4a1b86620c6c8eda9f71fd",
+    "firmware/main/Kconfig.projbuild": "07cff166da8965cce914bc1f225852a63316329d72590804cdacdf591c7a0765",
+    "firmware/main/app_main.c": "294bbebbcf252876d321835050d147558a33a0dab95f528a1454a54e66e95f1e",
+    "firmware/main/app_state.h": "eac7f7098bf4b8a4f952b8874a46069a51e58a43beff2ecc1cce240a0eedf65e",
+    "firmware/main/board.h": "0fbca7455174d1fb02d79d70b288bca5a43cd94a1db5e83ca93d15269605d5bb",
+    "firmware/main/command_json.c": "ed28774717cde8991d1c060399a51babc33c367e2d9733b53be22e9d88e18ac6",
+    "firmware/main/command_json.h": "3db1d133f46109be4cb24eb8c0952beac23ad4b9589825a9b2a70e8c1a891edc",
+    "firmware/main/device_config.c": "b7d8347b3bed863501d621f669f3d8e2ff516750e9e6631edc7a9db6732fd628",
+    "firmware/main/device_config.h": "f87a69aff04b793a36ce4df3930d4100bbe60ed6c47de337e427ec9b21a0fca6",
+    "firmware/main/network.c": "d0f52a61f0da0dd03813dfaa3328c585fee4376736cd2e28a59c2b9c11ae53a4",
+    "firmware/main/network.h": "18fdae1eec19a84b93e7d45e412e71676897dc680eb02b14b6170538eeb874b0",
+    "firmware/partitions.csv": "eaef803a3de2717770a40446c7ff874fa1d0eb5c884c8b7584f2c0324ba25367",
+    "firmware/sdkconfig": "351ab73cfd653960f8e990d2b8df053709a539e722437a1f8a0c610cde27697b",
+    "firmware/sdkconfig.defaults": "55f100d281b3062ae70296f378530b85fc8ef8205097564627e331408edee080",
+    "firmware/tests/test_core.c": "ba6d562f7b9e97d0746c917ed2d6cac4704768e27b5fed9fd2d49f5b69260d4e",
+    "firmware/tools/prepare_factory_csv.py": "cbdba380bdb9a3b32114b8e94c7e563e7adcef6a4c2cb12c6e562017431237dd"
+  },
+  "physical_validation": {
+    "built": false,
+    "flashed": false,
+    "energized": false,
+    "production_credentials_created": false,
+    "RF_tested": false,
+    "calibrated": false
+  },
+  "current_evidence": "../verification/local-validation.json",
+  "historical_sanitizers": "Earlier Linux ASan/UBSan evidence remains only in Git history; this Windows run does not claim sanitizer coverage.",
+  "source_binding": "Published source bytes; native KiCad/JSON preserve exact bytes, ordinary code uses LF. Full host and target builds rerun after normalization."
+}

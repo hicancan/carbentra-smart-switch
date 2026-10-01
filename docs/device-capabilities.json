@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "device_type": "smart_switch",
+  "firmware_target": "esp32c3",
+  "transport": {
+    "telemetry": "mqtt_mtls",
+    "control": "mqtt_mtls",
+    "ble": "wifi_provisioning_security2_only"
+  },
+  "channels": [
+    {
+      "wire_id": "lighting-1",
+      "canonical_id": "relay.1",
+      "capabilities": [
+        "on_off",
+        "physical_momentary_input",
+        "manual_hold"
+      ],
+      "independent_feedback": false
+    },
+    {
+      "wire_id": "lighting-2",
+      "canonical_id": "relay.2",
+      "capabilities": [
+        "on_off",
+        "physical_momentary_input",
+        "manual_hold"
+      ],
+      "independent_feedback": false
+    },
+    {
+      "wire_id": "lighting-3",
+      "canonical_id": "relay.3",
+      "capabilities": [
+        "on_off",
+        "physical_momentary_input",
+        "manual_hold"
+      ],
+      "independent_feedback": false
+    }
+  ],
+  "measurement_boundary": {
+    "scope": "aggregate_three_lighting_outputs",
+    "per_channel_energy": false,
+    "quality_requires": "per_unit_calibration_and_readback",
+    "energy_quality": "partial_lower_bound"
+  },
+  "physical_release": {
+    "compile_default": "disabled",
+    "requires": [
+      "deliberate_per_unit_commissioning",
+      "independent_hardware_qualification"
+    ],
+    "physical_testing_performed": false
+  },
+  "control": {
+    "boot": "all_off",
+    "local_input": "35ms_debounce_release_before_first_press",
+    "manual_hold_default_ms": 900000,
+    "hold_scope": "individual_channel",
+    "remote_override": false,
+    "maintenance": "forces_off_blocks_energizing",
+    "protected": "rejects_automation_retains_physical_local_input",
+    "fault": "latched_gpio_request_failure_requests_all_off",
+    "feedback_claim": "commanded_only"
+  },
+  "scope": "Hardware implementation and physical release facts; canonical capabilities and descriptors belong to the shared package",
+  "canonical_descriptor_source": "carbentra-campus-platform/packages/iot-contract/examples/descriptors.json",
+  "canonical_schema_source": "carbentra-campus-platform/packages/iot-contract/schemas/descriptor.schema.json"
+}

@@ -1,0 +1,354 @@
+{
+  "units": "mm",
+  "coordinate_system": "PCB XY from top-left, x right/y down; mechanical x=pcb_x-width/2, y=height/2-pcb_y",
+  "status": "proposed engineering envelope, not vendor complete STEP models",
+  "boards": [
+    {
+      "name": "power",
+      "width": 68,
+      "height": 64,
+      "thickness": 1.6,
+      "z_bottom": -25.6,
+      "z_top": -24,
+      "mounting_holes": [],
+      "components": [
+        {
+          "ref": "PS1",
+          "part": "RECOM RAC05-05SK/277",
+          "center": [
+            22,
+            47
+          ],
+          "body": [
+            26.7,
+            31.7,
+            21.8
+          ],
+          "side": "F"
+        },
+        {
+          "ref": "K1",
+          "part": "Omron G5Q-1A DC5",
+          "center": [
+            46.81,
+            7.97
+          ],
+          "body": [
+            20.3,
+            10.3,
+            15.8
+          ],
+          "side": "F"
+        },
+        {
+          "ref": "K2",
+          "part": "Omron G5Q-1A DC5",
+          "center": [
+            46.81,
+            19.97
+          ],
+          "body": [
+            20.3,
+            10.3,
+            15.8
+          ],
+          "side": "F"
+        },
+        {
+          "ref": "K3",
+          "part": "Omron G5Q-1A DC5",
+          "center": [
+            46.81,
+            31.97
+          ],
+          "body": [
+            20.3,
+            10.3,
+            15.8
+          ],
+          "side": "F"
+        },
+        {
+          "ref": "J1",
+          "part": "5-way 5.08 mm terminal",
+          "center": [
+            17.16,
+            6
+          ],
+          "body": [
+            25.4,
+            9,
+            12
+          ],
+          "side": "F"
+        },
+        {
+          "ref": "U2",
+          "part": "MCP39F511A",
+          "center": [
+            27,
+            25
+          ],
+          "body": [
+            5,
+            5,
+            1
+          ],
+          "side": "B"
+        },
+        {
+          "ref": "U3",
+          "part": "ISOW7821DWER",
+          "center": [
+            52,
+            48
+          ],
+          "body": [
+            7.5,
+            10.3,
+            2.65
+          ],
+          "courtyard": [
+            11.9,
+            10.9
+          ],
+          "side": "F"
+        },
+        {
+          "ref": "J2",
+          "part": "JST B8B-PH-K-S",
+          "center": [
+            64.4,
+            50.15
+          ],
+          "pcb_origin": [
+            64,
+            57
+          ],
+          "rotation": 90,
+          "side": "F",
+          "body": [
+            5.1,
+            18.5,
+            6
+          ],
+          "mated_envelope": [
+            7,
+            20,
+            10
+          ]
+        },
+        {
+          "ref": "RV1",
+          "part": "Littelfuse TMOV14RP275E",
+          "center": [
+            17,
+            24
+          ],
+          "side": "F",
+          "body": [
+            17,
+            9.5,
+            22
+          ],
+          "note": "maximum envelope; lead-form tolerance \u00b11mm requires incoming check"
+        },
+        {
+          "ref": "F1",
+          "part": "SCHURTER 3403.0277.23",
+          "center": [
+            18,
+            15
+          ],
+          "side": "F",
+          "body": [
+            16,
+            5.35,
+            5.4
+          ]
+        },
+        {
+          "ref": "C15",
+          "part": "220uF 6.3V aluminum capacitor",
+          "center": [
+            57.5,
+            60
+          ],
+          "side": "B",
+          "body": [
+            6.3,
+            6.3,
+            5.8
+          ],
+          "note": "0.6mm nominal rear-floor gap; assembly tolerance validation required"
+        },
+        {
+          "ref": "C16",
+          "part": "100uF 10V aluminum capacitor",
+          "center": [
+            32,
+            59
+          ],
+          "side": "B",
+          "body": [
+            6.3,
+            6.3,
+            5.8
+          ],
+          "note": "0.6mm nominal clearance to rear floor; tolerance validation required"
+        }
+      ],
+      "mounting_screw_axes": [
+        [
+          4,
+          32
+        ],
+        [
+          64,
+          32
+        ]
+      ],
+      "side_notches": [
+        {
+          "x": [
+            0,
+            8.5
+          ],
+          "y": [
+            27.5,
+            36.5
+          ]
+        },
+        {
+          "x": [
+            59.5,
+            68
+          ],
+          "y": [
+            27.5,
+            36.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "control",
+      "width": 76,
+      "height": 76,
+      "thickness": 1,
+      "z_bottom": 3.2,
+      "z_top": 4.2,
+      "mounting_holes": [
+        [
+          8,
+          38,
+          8.5
+        ],
+        [
+          68,
+          38,
+          8.5
+        ]
+      ],
+      "components": [
+        {
+          "ref": "U1",
+          "part": "ESP32-C3-MINI-1-N4X",
+          "center": [
+            38,
+            6.5
+          ],
+          "body": [
+            13.2,
+            16.6,
+            2.4
+          ],
+          "antenna_tip_y": -1.8,
+          "side": "F"
+        },
+        {
+          "ref": "SW1",
+          "part": "Omron B3U-1000P",
+          "center": [
+            16,
+            38
+          ],
+          "body": [
+            3,
+            2.5,
+            1.6
+          ],
+          "side": "F"
+        },
+        {
+          "ref": "SW2",
+          "part": "Omron B3U-1000P",
+          "center": [
+            38,
+            38
+          ],
+          "body": [
+            3,
+            2.5,
+            1.6
+          ],
+          "side": "F"
+        },
+        {
+          "ref": "SW3",
+          "part": "Omron B3U-1000P",
+          "center": [
+            60,
+            38
+          ],
+          "body": [
+            3,
+            2.5,
+            1.6
+          ],
+          "side": "F"
+        },
+        {
+          "ref": "J3",
+          "part": "JST B8B-PH-K-S",
+          "center": [
+            53.15,
+            61.4
+          ],
+          "pcb_origin": [
+            60,
+            61
+          ],
+          "rotation": 0,
+          "side": "B",
+          "body": [
+            18.5,
+            5.1,
+            6
+          ],
+          "mated_envelope": [
+            20,
+            7,
+            10
+          ],
+          "note": "B-side mirror makes pin row extend toward decreasing PCB X; requires isolated-cold pocket through partition"
+        }
+      ]
+    }
+  ],
+  "rf_note": "All-plastic carrier and rim. Antenna tip overhangs PCB. No copper below antenna on any layer; 15mm lateral metal keepout, enclosure RF validation pending. Rear board is 27mm below front PCB; keep rear components out of antenna frontal projection.",
+  "harness": {
+    "pins": 8,
+    "domain": "isolated cold only",
+    "j2_origin": [
+      64,
+      57
+    ],
+    "j3_origin": [
+      60,
+      61
+    ],
+    "reserve_bend_radius": 5,
+    "mated_height_budget": 10
+  }
+}

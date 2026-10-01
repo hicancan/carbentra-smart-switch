@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "validated_on": "2026-10-01",
+  "platform": "Windows x64",
+  "tools": {
+    "python": "3.12.13",
+    "uv": "0.11.17",
+    "msvc": "19.44.35228.0",
+    "KiCad": "10.0.5",
+    "KiCad_embedded_Python": "3.11.5",
+    "Blender": "5.2.2 LTS",
+    "render_device": "OPTIX / NVIDIA GeForce RTX 5060 Laptop GPU"
+  },
+  "actions": {
+    "host": "passed",
+    "target": "passed",
+    "electronics": "passed",
+    "mechanical": "passed",
+    "render": "passed"
+  },
+  "native_ecad": {
+    "control": {
+      "connected_nets": 19,
+      "connected_pad_nodes": 96,
+      "intentional_NC_pins": 14,
+      "schematic_pcb_net_mismatches": [],
+      "erc_violations": 0,
+      "drc_violations": 0,
+      "unconnected_items": 0,
+      "tracks": 699,
+      "vias": 54,
+      "copper_layers": 4
+    },
+    "power": {
+      "connected_nets": 38,
+      "connected_pad_nodes": 148,
+      "intentional_NC_pins": 15,
+      "schematic_pcb_net_mismatches": [],
+      "erc_violations": 0,
+      "drc_violations": 0,
+      "unconnected_items": 0,
+      "tracks": 2333,
+      "vias": 92,
+      "copper_layers": 4
+    }
+  },
+  "firmware": {
+    "host": {
+      "ctest_passed": 1,
+      "malformed_json_cases": 2000,
+      "groups": [
+        "commissioning and actuation guards",
+        "channel-local manual hold",
+        "maintenance/protected/fault",
+        "debounced offline keys",
+        "replay and idempotency",
+        "meter frames and energy persistence",
+        "strict uint64 JSON"
+      ],
+      "compiler": "MSVC 19.44 x64 C11",
+      "strict_warnings": true,
+      "assertions_enabled": true,
+      "current_sanitizer_run": false
+    },
+    "target": {
+      "board": "ESP32-C3",
+      "sdk": "ESP-IDF 5.4.3",
+      "sdk_commit": "ea1c174c1cbb7348bd8ba0ff1eb306246938dd80",
+      "application_partition_bytes": 2621440,
+      "image_bytes": 1121504,
+      "actuation_enabled": false
+    }
+  },
+  "mechanical": {
+    "file_reopening_passed": true,
+    "exported_glb_and_stl_checked": true,
+    "native_models_sha256": {
+      "carbentra_smart_switch.blend": "6b70ec0189a437d12b687ca4885a2e5fae4c8425eb616a379daf956fc017d990",
+      "carbentra_smart_switch_animation.blend": "d4a31167bc8d04f516ac35d0c72c07ef6baea7c5e432f9e76e988d94d63ad6a3"
+    },
+    "scoped_geometry_checks_passed": true
+  },
+  "media": {
+    "renderer": "Blender Cycles OptiX",
+    "unique_3d_states": 37,
+    "frame_count": 144,
+    "fps": 24,
+    "duration_seconds": 6,
+    "all_frames_decoded": true,
+    "hero_sha256": "1d6c7a4c5e30fe95b050c8aaf69a51a8035b2cdd2446ef4424a780650e936aeb"
+  },
+  "physical_validation": {
+    "built": false,
+    "flashed": false,
+    "energized": false,
+    "production_credentials_created": false,
+    "RF_tested": false,
+    "calibrated": false
+  },
+  "reproduction_boundary": "Native KiCad -> strict checks -> manufacturing outputs. Parametric Blender source -> generated and reopened geometry/exports. Old ECO/autorouting retired to Git history; no claim of reconstructing identical routed boards from them.",
+  "source_sha256_at_full_build": {
+    "electronics/control.kicad_pcb": "4a0f1d01ebd0581de2a9d81416910fdcbfbb99c70cfb474d1845e1e363727991",
+    "electronics/control.kicad_sch": "8467f3d0ef5b9ab50f399d03349e48ab71027ad6317ccc08ebb9a32e4f615b2b",
+    "electronics/power.kicad_pcb": "29bbb4917e6c9cd6cce9cb6d9b19eb03f91633d18aad583b0e941ffcab95ff75",
+    "electronics/power.kicad_sch": "3311d374898c72000a14393011bc4faf370a7dff05bc59f345b0994beedeb497",
+    "scripts/dev.ps1": "f311fba25f946b3367991d74ff84323926674e178fed2bdce976ac6c402ffd1a",
+    "scripts/engineering.py": "2d6be20bcff1f788dfc0cc0a486478dd16556e315a9ed949738eee79daae4855",
+    "scripts/local_runtime.py": "973f7c672d859df6722d6c4a39f88ed444faeda73b29d271b50b46c882ab4141",
+    "scripts/package_release.py": "6570e22b573930cdc9b7cd25d123f24349ea0ef2773bc268007ce82cf221c839",
+    "electronics/scripts/check_connectivity.py": "5ea4e03bca251e5cda36772b9cc0ecd354b6150f7ef896dfec2d1a8f4746d5f6",
+    "electronics/scripts/check_isolation.py": "01caa8fe09b058b7b4bd59da70831bd165d715f0d6d6c472043fb07f2009f435",
+    "electronics/scripts/check_load_paths.py": "428273ca8cf86d59e07203cdd1bdfa1e051808f0ba70ffdf3a04fe90e3964f79",
+    "electronics/scripts/presentation_sheets.py": "75c344b5bd74b18644238de5de3602c182d1c8446a9148b1915c596f8a1d14c0",
+    "electronics/scripts/sexpr_util.py": "29260c15ce7ee48fe93410d7ab6efb0a435956b4737ac67f7179400238f336f7",
+    "firmware/core/meter.c": "fbb6eea1e954fe3cefcd3b02fd6841d792a215f2606461b775469ab00c96826b",
+    "firmware/core/meter.h": "3cea38ecc2c7ad83d7f222e6c6f0b48a79a371f2d62611745f64ebd9534e67de",
+    "firmware/core/switch_core.c": "2e804ab363d55fb6ececd78e3ab713485e4b15c0a4acbd093befefd76b192d4d",
+    "firmware/core/switch_core.h": "7be0725f6417e835560ed786cce40c19ec3fed93ebeb58be6cde939d93f266e1",
+    "firmware/main/app_main.c": "294bbebbcf252876d321835050d147558a33a0dab95f528a1454a54e66e95f1e",
+    "firmware/main/app_state.h": "eac7f7098bf4b8a4f952b8874a46069a51e58a43beff2ecc1cce240a0eedf65e",
+    "firmware/main/board.h": "0fbca7455174d1fb02d79d70b288bca5a43cd94a1db5e83ca93d15269605d5bb",
+    "firmware/main/command_json.c": "ed28774717cde8991d1c060399a51babc33c367e2d9733b53be22e9d88e18ac6",
+    "firmware/main/command_json.h": "3db1d133f46109be4cb24eb8c0952beac23ad4b9589825a9b2a70e8c1a891edc",
+    "firmware/main/device_config.c": "b7d8347b3bed863501d621f669f3d8e2ff516750e9e6631edc7a9db6732fd628",
+    "firmware/main/device_config.h": "f87a69aff04b793a36ce4df3930d4100bbe60ed6c47de337e427ec9b21a0fca6",
+    "firmware/main/network.c": "d0f52a61f0da0dd03813dfaa3328c585fee4376736cd2e28a59c2b9c11ae53a4",
+    "firmware/main/network.h": "18fdae1eec19a84b93e7d45e412e71676897dc680eb02b14b6170538eeb874b0",
+    "firmware/tests/test_core.c": "ba6d562f7b9e97d0746c917ed2d6cac4704768e27b5fed9fd2d49f5b69260d4e",
+    "firmware/tools/prepare_factory_csv.py": "cbdba380bdb9a3b32114b8e94c7e563e7adcef6a4c2cb12c6e562017431237dd",
+    "mechanical/source/build_switch.py": "1c2302290de03f9c183ad1b8771338c1874eb9e6a7c3504847195b3b0b20df18",
+    "mechanical/source/compose_presentation.py": "f1df249f19442efde07a85dd508b42553db3c3f9b8f641d2dd19b5f33df5aaed",
+    "mechanical/source/internal_layout.py": "0e7a11e6e7877bc71822c622dc72f4faba109152003e44af743822cf4924ef0c",
+    "mechanical/source/render_presentation.py": "2304f2248f82757a0feb6d0f4a837a64c12285dea34ad650862455c54b0ef714",
+    "mechanical/source/verify_files.py": "f3e22e19b0f3c3d6c3d28bfd09480afe09e0406c39690d6542ce96a98b8adde8"
+  },
+  "detailed_evidence": "Corresponding Release contains per-stage hashes and detailed generated checks; media is simulated geometry, not physical operation.",
+  "isolation": {
+    "board": "power",
+    "method": "All copper layers projected into XY; pad bounding rectangles conservatively enclose pad copper; track/via capsules. NC barrier pins assigned to their physical side. No 3D solid-insulation certification.",
+    "target_mm": 8,
+    "minimum_conservative_mm": 8.05542,
+    "nearest_pair": [
+      "track:H_3V3",
+      "track:C_GND"
+    ],
+    "violations": [],
+    "candidate_pairs_tested": 319,
+    "hot_objects": 1935,
+    "cold_objects": 662
+  },
+  "current_paths": {
+    "method": "Native KiCad connectivity with every track narrower than 1.2 mm and every via smaller than 1.6 mm removed in a temporary copy. Original pads preserved. Each path must remain connected.",
+    "paths": [
+      {
+        "path": "line_to_fuse",
+        "source": "J1.1",
+        "destination": "F1.1",
+        "net": "L_IN",
+        "connected_without_signal_tracks": true,
+        "minimum_retained_track_width_mm": 1.2,
+        "minimum_retained_via_diameter_mm": 1.6
+      },
+      {
+        "path": "fuse_to_shunt",
+        "source": "F1.2",
+        "destination": "R7.1",
+        "net": "H_GND",
+        "connected_without_signal_tracks": true,
+        "minimum_retained_track_width_mm": 1.2,
+        "minimum_retained_via_diameter_mm": 1.6
+      },
+      {
+        "path": "shunt_to_relay_1",
+        "source": "R7.4",
+        "destination": "K1.2",
+        "net": "H_LOAD",
+        "connected_without_signal_tracks": true,
+        "minimum_retained_track_width_mm": 1.2,
+        "minimum_retained_via_diameter_mm": 1.6
+      },
+      {
+        "path": "relay_1_to_terminal",
+        "source": "K1.3",
+        "destination": "J1.3",
+        "net": "L_OUT1",
+        "connected_without_signal_tracks": true,
+        "minimum_retained_track_width_mm": 1.2,
+        "minimum_retained_via_diameter_mm": 1.6
+      },
+      {
+        "path": "shunt_to_relay_2",
+        "source": "R7.4",
+        "destination": "K2.2",
+        "net": "H_LOAD",
+        "connected_without_signal_tracks": true,
+        "minimum_retained_track_width_mm": 1.2,
+        "minimum_retained_via_diameter_mm": 1.6
+      },
+      {
+        "path": "relay_2_to_terminal",
+        "source": "K2.3",
+        "destination": "J1.4",
+        "net": "L_OUT2",
+        "connected_without_signal_tracks": true,
+        "minimum_retained_track_width_mm": 1.2,
+        "minimum_retained_via_diameter_mm": 1.6
+      },
+      {
+        "path": "shunt_to_relay_3",
+        "source": "R7.4",
+        "destination": "K3.2",
+        "net": "H_LOAD",
+        "connected_without_signal_tracks": true,
+        "minimum_retained_track_width_mm": 1.2,
+        "minimum_retained_via_diameter_mm": 1.6
+      },
+      {
+        "path": "relay_3_to_terminal",
+        "source": "K3.3",
+        "destination": "J1.5",
+        "net": "L_OUT3",
+        "connected_without_signal_tracks": true,
+        "minimum_retained_track_width_mm": 1.2,
+        "minimum_retained_via_diameter_mm": 1.6
+      }
+    ],
+    "temperature_rise_tested": false,
+    "qualified_load_rating": false,
+    "note": "F1 and shunt internal current paths are component internals, not bridged by PCB copper in this check."
+  },
+  "host_ci_followup": {
+    "local_result": "passed",
+    "entry": "scripts/dev.ps1 -Action host",
+    "target_sdk_environment_removed": true,
+    "CAD_environment_removed": true,
+    "remote_GitHub_run_claimed": false,
+    "standalone_cjson": "c859b25da02955fef659d658b8f324b5cde87be3",
+    "historical_as_executed_source_sha256": {
+      "scripts/dev.ps1": "f311fba25f946b3367991d74ff84323926674e178fed2bdce976ac6c402ffd1a",
+      "scripts/engineering.py": "7ec1c0f49295adeaa98a87bf9fc5b4efd1527be26a544419a847f46ae902022e",
+      "firmware/core/meter.c": "fbb6eea1e954fe3cefcd3b02fd6841d792a215f2606461b775469ab00c96826b",
+      "firmware/core/meter.h": "3cea38ecc2c7ad83d7f222e6c6f0b48a79a371f2d62611745f64ebd9534e67de",
+      "firmware/core/switch_core.c": "2e804ab363d55fb6ececd78e3ab713485e4b15c0a4acbd093befefd76b192d4d",
+      "firmware/core/switch_core.h": "7be0725f6417e835560ed786cce40c19ec3fed93ebeb58be6cde939d93f266e1",
+      "firmware/main/app_main.c": "294bbebbcf252876d321835050d147558a33a0dab95f528a1454a54e66e95f1e",
+      "firmware/main/app_state.h": "eac7f7098bf4b8a4f952b8874a46069a51e58a43beff2ecc1cce240a0eedf65e",
+      "firmware/main/board.h": "0fbca7455174d1fb02d79d70b288bca5a43cd94a1db5e83ca93d15269605d5bb",
+      "firmware/main/command_json.c": "ed28774717cde8991d1c060399a51babc33c367e2d9733b53be22e9d88e18ac6",
+      "firmware/main/command_json.h": "3db1d133f46109be4cb24eb8c0952beac23ad4b9589825a9b2a70e8c1a891edc",
+      "firmware/main/device_config.c": "b7d8347b3bed863501d621f669f3d8e2ff516750e9e6631edc7a9db6732fd628",
+      "firmware/main/device_config.h": "f87a69aff04b793a36ce4df3930d4100bbe60ed6c47de337e427ec9b21a0fca6",
+      "firmware/main/network.c": "d0f52a61f0da0dd03813dfaa3328c585fee4376736cd2e28a59c2b9c11ae53a4",
+      "firmware/main/network.h": "18fdae1eec19a84b93e7d45e412e71676897dc680eb02b14b6170538eeb874b0",
+      "firmware/tests/test_core.c": "ba6d562f7b9e97d0746c917ed2d6cac4704768e27b5fed9fd2d49f5b69260d4e",
+      "firmware/tools/prepare_factory_csv.py": "cbdba380bdb9a3b32114b8e94c7e563e7adcef6a4c2cb12c6e562017431237dd",
+      "firmware/host/CMakeLists.txt": "ded5fd515e28625e360c2924c32fe1bf45823754878eb57af05402970dd8114d"
+    }
+  },
+  "historical_render_execution_source_sha256": {
+    "scripts/local_runtime.py": "973f7c672d859df6722d6c4a39f88ed444faeda73b29d271b50b46c882ab4141",
+    "mechanical/source/build_switch.py": "4dd60e6ef6731da61858597d7b3c850deb9dabefee7acf1126fd51031dc541ba",
+    "mechanical/source/compose_presentation.py": "f1df249f19442efde07a85dd508b42553db3c3f9b8f641d2dd19b5f33df5aaed",
+    "mechanical/source/internal_layout.py": "0e7a11e6e7877bc71822c622dc72f4faba109152003e44af743822cf4924ef0c",
+    "mechanical/source/render_presentation.py": "fefa6265a43c8b042c2d42892e17e0f0253a7eeeb0c72d1205d8dc90770cec48",
+    "mechanical/source/verify_files.py": "f3e22e19b0f3c3d6c3d28bfd09480afe09e0406c39690d6542ce96a98b8adde8"
+  },
+  "source_binding": {
+    "published_manifest": "source-manifest.json",
+    "full_build_after_EOL_normalization": true,
+    "git_blob_byte_comparison": "passed",
+    "historical_execution_note": "Historical render/standalone-host source hashes describe their original Windows working-tree bytes. They are not asserted as current-checkout hashes. Native CAD and geometric inputs are unchanged; only text EOL and host dependency selection changed."
+  }
+}

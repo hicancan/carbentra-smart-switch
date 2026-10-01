@@ -1,0 +1,19 @@
+.runtime/
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+*.blend1
+*.blend2
+*.kicad_prl
+*-backups/
+*.lck
+*.log
+
+# Generated in the explicit external build directory
+electronics/fabrication/
+electronics/verification/
+mechanical/exports/
+mechanical/verification/
+presentation/
+firmware/artifacts/
