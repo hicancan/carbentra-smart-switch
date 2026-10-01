@@ -18,7 +18,8 @@
     "strict_warnings": true,
     "assertions_enabled": true,
     "current_sanitizer_run": false,
-    "SDK_free_host_path_passed": true
+    "SDK_free_host_path_passed": true,
+    "native_backslash_paths_cmake_3_30_2_passed": true
   },
   "target_build": {
     "board": "ESP32-C3",
@@ -43,7 +44,7 @@
     }
   },
   "source_sha256": {
-    "firmware/host/CMakeLists.txt": "ded5fd515e28625e360c2924c32fe1bf45823754878eb57af05402970dd8114d",
+    "firmware/host/CMakeLists.txt": "49c0f05c9af95cada1800d2905acccf1a168b324fa046f0b728a64c4ba0f2e64",
     "firmware/.gitignore": "546f7860bff469a555483f4efc1d47904220d60ce9c932fd20a8a664271dd2b8",
     "firmware/CMakeLists.txt": "64b607b574c726a7b043036dde1cec2121e74f11b08a34974dfe981d13f79eb6",
     "firmware/core/meter.c": "fbb6eea1e954fe3cefcd3b02fd6841d792a215f2606461b775469ab00c96826b",
@@ -78,5 +79,5 @@
   },
   "current_evidence": "../verification/local-validation.json",
   "historical_sanitizers": "Earlier Linux ASan/UBSan evidence remains only in Git history; this Windows run does not claim sanitizer coverage.",
-  "source_binding": "Published source bytes; native KiCad/JSON preserve exact bytes, ordinary code uses LF. Full host and target builds rerun after normalization."
+  "source_binding": "Published source bytes; native KiCad/JSON preserve exact bytes, ordinary code uses LF. Full builds passed after normalization. For v0.1.1, both host dependency paths were rebuilt with CMake 3.30.2 after a host-only CMake fix; unchanged target outputs retain the prior full-build evidence."
 }

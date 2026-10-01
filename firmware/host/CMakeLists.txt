@@ -10,6 +10,9 @@ elseif(DEFINED ENV{IDF_PATH})
 else()
   message(FATAL_ERROR "Set CJSON_ROOT to the pinned cJSON checkout, or IDF_PATH to ESP-IDF 5.4.3")
 endif()
+# Native environment paths can contain CMake escapes such as \\a on Windows.
+# Normalize at the consumer so both the coordinator and direct CMake calls work.
+file(TO_CMAKE_PATH "${CJSON}" CJSON)
 if(NOT EXISTS "${CJSON}/cJSON.c")
   message(FATAL_ERROR "The cJSON source checkout is incomplete: ${CJSON}")
 endif()

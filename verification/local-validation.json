@@ -269,5 +269,46 @@
     "full_build_after_EOL_normalization": true,
     "git_blob_byte_comparison": "passed",
     "historical_execution_note": "Historical render/standalone-host source hashes describe their original Windows working-tree bytes. They are not asserted as current-checkout hashes. Native CAD and geometric inputs are unchanged; only text EOL and host dependency selection changed."
+  },
+  "post_release_host_path_regression": {
+    "release": "v0.1.1-local.20261001",
+    "trigger": "https://github.com/hicancan/carbentra-smart-switch/actions/runs/36859766903",
+    "trigger_result": "failed: CMake rejected the native backslash CJSON_ROOT path",
+    "fix": "Normalize CJSON_ROOT or the IDF_PATH fallback with file(TO_CMAKE_PATH) in firmware/host/CMakeLists.txt.",
+    "entry": "scripts/dev.ps1 -Action host",
+    "cmake": "3.30.2",
+    "compiler": "MSVC 19.44.35228.0 x64 C11",
+    "dependency_commit": "c859b25da02955fef659d658b8f324b5cde87be3",
+    "native_backslash_path_reproduced": true,
+    "baseline": {
+      "result": "failed",
+      "exit_code": 1,
+      "error": "Invalid character escape",
+      "cmake_source_sha256": "ded5fd515e28625e360c2924c32fe1bf45823754878eb57af05402970dd8114d"
+    },
+    "standalone_cjson": {
+      "result": "passed",
+      "ctest_passed": 1,
+      "IDF_PATH_unset": true,
+      "CJSON_ROOT": "D:\\Temp\\codex\\carbentra-localize-20261001\\hardware\\ci-path-regression\\a\\_temp\\carbentra-cjson"
+    },
+    "idf_fallback": {
+      "result": "passed",
+      "ctest_passed": 1,
+      "CJSON_ROOT_unset": true,
+      "IDF_PATH": "D:\\Dev\\esp-idf-v5.4.3"
+    },
+    "source_sha256": {
+      "firmware/host/CMakeLists.txt": "49c0f05c9af95cada1800d2905acccf1a168b324fa046f0b728a64c4ba0f2e64",
+      "scripts/dev.ps1": "f311fba25f946b3367991d74ff84323926674e178fed2bdce976ac6c402ffd1a",
+      "scripts/engineering.py": "2d6be20bcff1f788dfc0cc0a486478dd16556e315a9ed949738eee79daae4855"
+    },
+    "log_sha256": {
+      "ci-path-regression-before.log": "3de66e116775e086f2834defa0c7606e7b4a935fe9c26ad1b4be2a3dfba1d08e",
+      "ci-path-regression-after.log": "bfe370e42e240841d97571530f434de691f27a4af73191f275da28140c3bdfa6",
+      "ci-path-regression-idf-fallback.log": "6477cd204c91e8d3b049741bf44edb55747865a6b434ae3c36f7c344e6bf1db6"
+    },
+    "remote_fix_run_claimed": false,
+    "reuse_scope": "Target firmware, native CAD, geometry and rendering inputs are unchanged from the full build. Only host CMake dependency-path normalization was changed; both host dependency selection branches were rebuilt and tested."
   }
 }

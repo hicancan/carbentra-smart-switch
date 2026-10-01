@@ -283,8 +283,8 @@
       "sha256": "416f9a8af682c9afa377a0f194fe12845d622b7a79b3826510c6ad87c0515e62"
     },
     "firmware/host/CMakeLists.txt": {
-      "bytes": 1101,
-      "sha256": "ded5fd515e28625e360c2924c32fe1bf45823754878eb57af05402970dd8114d"
+      "bytes": 1296,
+      "sha256": "49c0f05c9af95cada1800d2905acccf1a168b324fa046f0b728a64c4ba0f2e64"
     },
     "firmware/licenses/ESP-IDF-Apache-2.0.txt": {
       "bytes": 11560,
